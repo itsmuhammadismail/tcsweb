@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Helvetica-Light";
+
+  src: url("/Fonts/Helvetica-Light.woff") format("woff"),
+    /* Modern Browsers */ url("/Fonts/Helvetica-Light.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Compressed";
+
+  src: url("/Fonts/Helvetica-Compressed.woff") format("woff"),
+    /* Modern Browsers */ url("/Fonts/Helvetica-Compressed.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Condensed-Oblique";
+
+  src: url("/Fonts/Helvetica-Condensed-Oblique.woff") format("woff"),
+    /* Modern Browsers */ url("/Fonts/Helvetica-Condensed-Oblique.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Condensed-Bold";
+
+  src: url("/Fonts/Helvetica-Condensed-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("/Fonts/Helvetica-Condensed-Bold.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Condensed";
+
+  src: url("/Fonts/Helvetica-Condensed.woff") format("woff"),
+    /* Modern Browsers */ url("/Fonts/Helvetica-Condensed.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica-Narrow-Bold";
+
+  src: url("/Fonts/Helvetica-Narrow-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("/Fonts/Helvetica-Narrow-Bold.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #ececec;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 8px;
+  background-color: #cc1219;
+  /* border-radius: 6px; */
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+  height: 8px;
+  background-color: #ea1a22;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  height: 8px;
+  background-color: #cc1219;
+  /* border-radius: 6px; */
+}
+::-webkit-scrollbar-thumb:horizontal:hover {
+  height: 8px;
+  background-color: #ea1a22;
+}
+::-moz-vertical-scrollbar {
+  width: 8px;
+  height: 15px;
+}
+::-moz-vertical-scrollbar-track-piece {
+  background-color: #ccc;
+}
+::-moz-vertical-scrollbar-thumb:vertical {
+  height: 8px;
+  background-color: #951f0b;
+}
+::-moz-vertical-scrollbar-thumb:horizontal {
+  height: 8px;
+  background-color: #951f0b;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Sans-Serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  @apply bg-white flex flex-col justify-center items-center w-full md:w-[13rem] h-[8rem]  gap-4 cursor-pointer;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+}
+
+.hr {
+  @apply w-[4rem] h-2 bg-[#ED1C24] rounded-full my-[1rem];
+}
+
+.moreBtn {
+  @apply bg-[#cc1219] text-white rounded-sm text-sm w-[12rem] h-[2.5rem] hover:bg-[#EA1A22];
+  transition: all 0.5s ease;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next {
+  background-image: url(/next.png);
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  width: 6rem !important;
+  background-position: center;
+  margin-right: 5rem;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background-image: url(/prev.png);
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  width: 6rem !important;
+  background-position: center;
+  margin-left: 5rem;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.nav .dropdown {
+  /* display: none; */
+  visibility: hidden;
+  z-index: 1000;
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: 0.4s, 0s;
+  transition-delay: 0s, 0.4s;
+}
+
+.nav:hover .dropdown {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s, 0s;
+}
+
+.social:hover {
+  filter: invert(47%) sepia(100%) saturate(5194%) hue-rotate(338deg)
+    brightness(86%) contrast(125%);
+  cursor: pointer;
+}
+
+.link li {
+  @apply cursor-pointer hover:text-[#F21E26];
+}
+
+/* Animations Keyframes */
+@keyframes zoom-in {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.shadow-my {
+  --tw-shadow: 0 0 25px -5px rgba(0, 0, 0, 0.1),
+    0 0px 10px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-my-lg {
+  --tw-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.1),
+    0 0px 6px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 130%;
+  }
+}
+.zoom {
+  z-index: 1;
+  animation: zoom 12s;
+  background-size: 130%;
+}
+.MuiPaper-elevation1 {
+  box-shadow: unset !important;
+  @apply border-b;
+}
+.MuiAccordion-root {
+  background-color: unset !important;
+  padding: 1rem 0 !important;
+}
+.MuiAccordionSummary-content p {
+  font-weight: bold !important;
+}
+.MuiAccordionDetails-root p {
+  @apply text-sm;
+}
+
+.gradientbg:hover {
+  background-image: linear-gradient(#ea1a22 20%, #bd0f14);
+}
