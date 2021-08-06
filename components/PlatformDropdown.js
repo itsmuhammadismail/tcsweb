@@ -160,7 +160,7 @@ const PlatformDropdown = () => {
       <div className="backdropdown absolute left-0 right-0 bottom-0 top-[20rem] bg-black z-10 opacity-50"></div>
       <div className="absolute dropdown w-[100vw] left-0 ">
         <div
-          className="absolute w-6 h-6 bg-white top-[0.25rem] right-[26rem]"
+          className="absolute w-6 h-6 bg-white top-[0.4rem] right-[26rem]"
           style={{ clipPath: "polygon(50% 0%, 0 68%, 100% 68%)" }}
         ></div>
         <div className="w-[17rem] h-12 absolute"></div>

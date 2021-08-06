@@ -18,7 +18,7 @@ const Header = () => {
           <div className="flex gap-6 mb-2 self-end">
             <div className="nav cursor-pointer">
               Pakistan <KeyboardArrowDownIcon />
-              <Dropdown items={["Pakistan", "UAE", "UK"]} />
+              <Dropdown items={["UAE", "UK"]} />
             </div>
             <SearchIcon />
           </div>

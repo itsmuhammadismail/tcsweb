@@ -8,11 +8,11 @@ const Dropdown = ({ items }) => {
   return Array.isArray(items) ? (
     <div className="absolute dropdown">
       <div
-        className="absolute w-6 h-6 bg-white top-[0.25rem] left-3"
+        className="absolute w-6 h-6 bg-white top-[0.1rem] left-3"
         style={{ clipPath: "polygon(50% 0%, 0 68%, 100% 68%)" }}
       ></div>
       <div className="w-[17rem] h-12 absolute"></div>
-      <div className="py-3 shadow-md bg-white text-[#373737] text-xs w-[7rem] rounded-b-sm mt-1 relative z-10 top-[0.9rem]">
+      <div className="py-3 shadow-md bg-white text-[#373737] text-xs w-[7rem] rounded-b-sm mt-1 relative z-10 top-[0.25rem]">
         <ul className="">
           {items.map((item, index) => (
             <li key={index} className="py-[0.3rem] px-3  hover:bg-[#e1e1e1]">
@@ -49,7 +49,7 @@ const Dropdown = ({ items }) => {
           </div>
         </ul>
       </div> */}
-      
+
     </div>
   );
 };
