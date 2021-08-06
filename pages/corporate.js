@@ -42,8 +42,17 @@ const Corporate = () => {
                 <div className="flex-1 flex flex-col gap-4">
                   <div className="flex gap-4">
                     {/* Organization Type */}
-                    <FormControl variant="outlined" className="flex-1">
-                      <InputLabel id="demo-simple-select-outlined-label">
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                    >
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
                         Organization Type
                       </InputLabel>
                       <Select
@@ -53,6 +62,8 @@ const Corporate = () => {
                         // value={age}
                         // onChange={handleChange}
                         label="Organization Type"
+                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                       >
                         {/* <MenuItem value="">
                           <em>None</em>
@@ -63,8 +74,17 @@ const Corporate = () => {
                       </Select>
                     </FormControl>
                     {/* Tax Registration status */}
-                    <FormControl variant="outlined" className="flex-1">
-                      <InputLabel id="demo-simple-select-outlined-label">
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                    >
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
                         Tax Registration Status
                       </InputLabel>
                       <Select
@@ -90,7 +110,10 @@ const Corporate = () => {
                       label="CNIC Number"
                       variant="outlined"
                       className="flex-1"
+                      size="small"
                       type="number"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                     />
                     <TextField
                       required
@@ -98,13 +121,25 @@ const Corporate = () => {
                       label="NTN Number"
                       variant="outlined"
                       className="flex-1"
+                      size="small"
                       type="number"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                     />
                   </div>
                   <div className="flex gap-4">
                     {/* City */}
-                    <FormControl variant="outlined" className="flex-1">
-                      <InputLabel id="demo-simple-select-outlined-label">
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                    >
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
                         City
                       </InputLabel>
                       <Select
@@ -123,8 +158,17 @@ const Corporate = () => {
                       </Select>
                     </FormControl>
                     {/* City */}
-                    <FormControl variant="outlined" className="flex-1">
-                      <InputLabel id="demo-simple-select-outlined-label">
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                    >
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
                         City
                       </InputLabel>
                       <Select

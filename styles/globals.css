@@ -111,6 +111,10 @@ body {
   overflow-x: hidden;
 }
 
+select {
+  font-size: 14px !important;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -296,4 +300,15 @@ a:hover {
 
 .gradientbg:hover {
   background-image: linear-gradient(#ea1a22 20%, #bd0f14);
+}
+
+.MuiFormLabel-root {
+  font-size: 14px !important;
+}
+.MuiPickersDatePickerRoot-toolbar,
+.MuiPickersDay-daySelected {
+  background-color: #f21e26 !important;
+}
+.MuiDialogActions-spacing button span {
+  color: #f21e26 !important;
 }

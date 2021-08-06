@@ -2,10 +2,29 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
+import FormControl from "@material-ui/core/FormControl";
+import FormLabel from "@material-ui/core/FormLabel";
+import TextField from "@material-ui/core/TextField";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import DateFnsUtils from "@date-io/date-fns";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from "@material-ui/pickers";
 
 const TCSKardo = () => {
   const [customer, setCustomer] = useState("");
   const [shipping, setShipping] = useState("");
+
+  const [selectedDate, setSelectedDate] = useState(
+    new Date("2014-08-18T21:11:54")
+  );
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
 
   const [productType, setProductType] = useState({
     "Courier Express": [
@@ -81,7 +100,7 @@ const TCSKardo = () => {
                   <p>One Origin & Destination</p>
                   <button
                     onClick={() => setShipping("single")}
-                    className="text-[#F21E26] border border-[#F21E26] w-full rounded-sm mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
+                    className="text-[#F21E26] border border-[#F21E26] w-full rounded-md mt-1 p-1 h-[2.5rem] text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
                   >
                     Get a Quote
                   </button>
@@ -91,7 +110,7 @@ const TCSKardo = () => {
                   <p>Including Multiple Origins & Destinations</p>
                   <button
                     onClick={() => setShipping("regular")}
-                    className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-sm mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
+                    className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-md mt-1 p-1 h-[2.5rem] text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
                   >
                     Open an Account
                   </button>
@@ -103,49 +122,102 @@ const TCSKardo = () => {
             <div className="flex flex-col justify-center items-center mt-[1rem]">
               <div className="flex flex-col gap-1 p-4 shadow-my-lg text-sm w-[45rem] rounded-md transition-all duration-500">
                 <h2 className="font-bold text-[1.1rem]">Get a Quote</h2>
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-2">
                   <div className="flex-1 flex flex-col">
-                    <label htmlFor="">Origin</label>
-                    <select
-                      name=""
-                      id=""
-                      className="border p-2 focus:outline-none"
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                     >
-                      <option value="">Adda Zakheera</option>
-                      <option value="">Karachi</option>
-                    </select>
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
+                        Origin
+                      </InputLabel>
+                      <Select
+                        required
+                        labelId="demo-simple-select-outlined-label"
+                        id="demo-simple-select-outlined"
+                        // value={age}
+                        // onChange={handleChange}
+                        label="Origin"
+                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                        onChange={handleProduct}
+                      >
+                        <MenuItem value="Abbotabad">Abbotabad</MenuItem>
+                        <MenuItem value="Karachi">Karachi</MenuItem>
+                      </Select>
+                    </FormControl>
                   </div>
                   <div className="flex-1 flex flex-col">
-                    <label htmlFor="">Destination</label>
-                    <select
-                      name=""
-                      id=""
-                      className="border p-2 focus:outline-none"
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                     >
-                      <option value="">Abbotabad</option>
-                      <option value="">Karachi</option>
-                    </select>
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
+                        Destination
+                      </InputLabel>
+                      <Select
+                        required
+                        labelId="demo-simple-select-outlined-label"
+                        id="demo-simple-select-outlined"
+                        // value={age}
+                        // onChange={handleChange}
+                        label="Destination"
+                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                        onChange={handleProduct}
+                      >
+                        <MenuItem value="Abbotabad">Lahore</MenuItem>
+                        <MenuItem value="Karachi">Karachi</MenuItem>
+                      </Select>
+                    </FormControl>
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 my-4">
                   <div className="flex-1 flex flex-col">
-                    <label htmlFor="">Weight</label>
-                    <input
-                      type="text"
-                      className="border p-2 focus:outline-none"
+                    <TextField
+                      required
+                      id="outlined-required"
+                      label="Weight"
+                      variant="outlined"
+                      size="small"
+                      type="number"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                     />
                   </div>
                   <div className="flex-1 flex flex-col">
-                    <label htmlFor="">Date</label>
-                    <input
-                      type="date"
-                      className="border p-2 focus:outline-none"
-                    />
+                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                      <KeyboardDatePicker
+                        // margin="normal"
+                        size="small"
+                        id="date-picker-dialog"
+                        label="Date"
+                        inputVariant="outlined"
+                        format="MM/dd/yyyy"
+                        value={selectedDate}
+                        onChange={handleDateChange}
+                        KeyboardButtonProps={{
+                          "aria-label": "change date",
+                        }}
+                      />
+                    </MuiPickersUtilsProvider>
                   </div>
                 </div>
                 <Link href="/rates">
                   <a>
-                    <button className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-sm mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
+                    <button className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
                       Check Rates
                     </button>
                   </a>
@@ -161,40 +233,77 @@ const TCSKardo = () => {
                 </h2>
                 <div className="flex gap-4">
                   <div className="flex-1 flex flex-col">
-                    <select
-                      name=""
-                      id=""
-                      className="border p-2 focus:outline-none"
-                      onChange={handleProduct}
+                    <FormControl
+                      variant="outlined"
+                      className="flex-1"
+                      size="small"
+                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                     >
-                      <option value="0">Select a Product</option>
-                      {productDropdown.map((product, index) => (
-                        <option key={index} value={product}>
-                          {product}
-                        </option>
-                      ))}
-                    </select>
+                      <InputLabel
+                        id="demo-simple-select-outlined-label"
+                        style={{ fontSize: "14px !important" }}
+                      >
+                        Product Type
+                      </InputLabel>
+                      <Select
+                        required
+                        labelId="demo-simple-select-outlined-label"
+                        id="demo-simple-select-outlined"
+                        // value={age}
+                        // onChange={handleChange}
+                        label="Product Type"
+                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                        onChange={handleProduct}
+                      >
+                        {productDropdown.map((product, index) => (
+                          <MenuItem key={index} value={product}>
+                            {product}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-1 flex flex-col">
                     {product2Dropdown.length !== 0 && (
-                      <select
-                        name=""
-                        id=""
-                        className="border p-2 focus:outline-none"
+                      <FormControl
+                        variant="outlined"
+                        className="flex-1"
+                        size="small"
+                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                       >
-                        {product2Dropdown.map((product, index) => (
-                          <option key={index} value={product}>
-                            {product}
-                          </option>
-                        ))}
-                      </select>
+                        <InputLabel
+                          id="demo-simple-select-outlined-label"
+                          style={{ fontSize: "14px !important" }}
+                        >
+                          Subcategory
+                        </InputLabel>
+                        <Select
+                          required
+                          labelId="demo-simple-select-outlined-label"
+                          id="demo-simple-select-outlined"
+                          // value={age}
+                          // onChange={handleChange}
+                          label="Subcategory"
+                          inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                          InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                        >
+                          {product2Dropdown.map((product, index) => (
+                            <MenuItem key={index} value={product}>
+                              {product}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
                     )}
                   </div>
                 </div>
 
-                <button className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-sm mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
+                <button className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-md mt-1 p-1 h-[2.5rem] text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
                   Open an Account
                 </button>
               </div>
