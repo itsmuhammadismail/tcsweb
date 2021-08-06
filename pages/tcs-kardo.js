@@ -193,13 +193,10 @@ const TCSKardo = () => {
                     )}
                   </div>
                 </div>
-                <Link href="/rates">
-                  <a>
-                    <button className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-sm mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
-                      Open an Account
-                    </button>
-                  </a>
-                </Link>
+
+                <button className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-sm mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
+                  Open an Account
+                </button>
               </div>
             </div>
           )}

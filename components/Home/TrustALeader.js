@@ -23,10 +23,15 @@ const TrustALeader = () => {
       className="flex flex-col justify-center p-[7rem]"
       style={{ backgroundImage: "url(Home/TrustALeaderBG.png)" }}
     >
-      <h1 className="font-bold text-4xl text-[#373737]" data-aos="fade-right">
+      <h1
+        className="font-bold text-4xl text-[#373737]"
+        // data-aos="fade-right"
+      >
         Trust A Leader To Deliver
       </h1>
-      <hr className="hr" data-aos="fade-right" data-aos-delay="200" />
+      <hr className="hr" 
+      // data-aos="fade-right" data-aos-delay="200" 
+      />
       <div className="flex justify-between items-center mt-[1rem]">
         <div className="flex-1 flex justify-center flex-wrap">
           <div

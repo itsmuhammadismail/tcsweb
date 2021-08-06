@@ -28,7 +28,9 @@ export default function NewsSlider() {
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working1.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem]">Community Learning</h1>
+            <h1 className="text-2xl font-bold mt-[8rem] text-white">
+              Community Learning
+            </h1>
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>
@@ -37,7 +39,9 @@ export default function NewsSlider() {
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working2.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem]">Health Insurance</h1>
+            <h1 className="text-2xl font-bold mt-[8rem] text-white">
+              Health Insurance
+            </h1>
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>
@@ -46,7 +50,7 @@ export default function NewsSlider() {
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working3.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem]">
+            <h1 className="text-2xl font-bold mt-[8rem] text-white">
               Your Work, Your Time
             </h1>
             <p>Industry-wide meetups, events and conferences.</p>
@@ -57,7 +61,9 @@ export default function NewsSlider() {
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working1.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem]">Community Learning</h1>
+            <h1 className="text-2xl font-bold mt-[8rem] text-white">
+              Community Learning
+            </h1>
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>

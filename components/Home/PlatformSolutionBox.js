@@ -4,13 +4,20 @@ import Link from "next/link";
 let delay = 0;
 const PlatformSolutionBox = ({ items }) => {
   return (
-    <div className="flex justify-center items-center gap-[4rem] mt-10 flex-wrap max-w-[70rem] cursor-pointer ">
+    <div
+      className={`flex justify-center items-center gap-[4rem] mt-10 flex-wrap pt-[2rem] cursor-pointer  ${
+        items.length !== 6 ? "max-w-[70rem]" : "max-w-[50rem]"
+      }`}
+    >
       {items.map((item, index) => (
-        <div key={index} data-aos="zoom-in" data-aos-delay={delay}>
+        <div
+          key={index}
+          // data-aos="zoom-in" data-aos-delay={delay}
+        >
           <div className="hidden">{(delay += 200)}</div>
           <Link href={item.link}>
             <a>
-              <div className="flex flex-col justify-center items-center text-center transition-all duration-500 hover:scale-75">
+              <div className="flex flex-col justify-center items-center text-center transition-all duration-500 hover:scale-75 mt-[-2rem]">
                 <img
                   src={item.img}
                   alt=""

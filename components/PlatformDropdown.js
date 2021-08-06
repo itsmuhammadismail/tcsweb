@@ -1,9 +1,9 @@
+import Link from "next/link";
 import { useState } from "react";
-import PlatformSolutionBox from "./PlatformSolutionBox";
-import { motion } from "framer-motion";
-import Fade from "react-reveal/Fade";
+import PlatformSolutionBox from "./Home/PlatformSolutionBox";
 
-const PlatformSolution = () => {
+let delay = 0;
+const PlatformDropdown = () => {
   const [selected, setSelected] = useState("Domestic");
   const [duration, setDuration] = useState(0);
   const [scale, setScale] = useState(1);
@@ -155,42 +155,67 @@ const PlatformSolution = () => {
       setScale(1);
     }, 100);
   };
-
   return (
-    <div className="flex flex-col justify-center items-center my-[5rem]">
-      <h1
-        className="font-bold text-4xl text-[#373737]"
-        // data-aos="fade-right"
-      >
-        Platform Solution
-      </h1>
-      <hr
-        className="hr"
-        // data-aos="fade-right" data-aos-delay="200"
-      />
-      <ul className="flex flex-col md:flex-row text-sm text-center gap-4 md:gap-12 mt-4">
-        {list.map((item, index) => (
-          <li
-            key={index}
-            className={
-              selected === item
-                ? "font-semibold text-[#ED1C24] cursor-pointer"
-                : "cursor-pointer "
-            }
-            onClick={() => {
-              handleSelected(item);
-              handleItem(item);
-            }}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-      <div>
-        <PlatformSolutionBox items={items} />
+    <>
+      <div className="backdropdown absolute left-0 right-0 bottom-0 top-[20rem] bg-black z-10 opacity-50"></div>
+      <div className="absolute dropdown w-[100vw] left-0 ">
+        <div
+          className="absolute w-6 h-6 bg-white top-[0.25rem] right-[26rem]"
+          style={{ clipPath: "polygon(50% 0%, 0 68%, 100% 68%)" }}
+        ></div>
+        <div className="w-[17rem] h-12 absolute"></div>
+        <div className=" pb-3 px-3 shadow-md graywhitegradient text-[#373737] text-xs w-full rounded-b-sm mt-1 absolute z-10 top-[0.9rem] left-[0px] flex flex-col  items-center h-[21rem]">
+          <ul className="flex flex-col md:flex-row text-sm text-center gap-4 md:gap-12 mt-4 pt-4">
+            {list.map((item, index) => (
+              <li
+                key={index}
+                className={
+                  selected === item
+                    ? "font-semibold text-[#ED1C24] cursor-pointer"
+                    : "cursor-pointer "
+                }
+                onClick={() => {
+                  handleSelected(item);
+                  handleItem(item);
+                }}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div>
+            <div
+              className={`flex justify-center items-center gap-[4rem] mt-10 flex-wrap  cursor-pointer pt-[1rem]  ${
+                items.length !== 6 ? "max-w-[70rem]" : "max-w-[50rem]"
+              }`}
+            >
+              {items.map((item, index) => (
+                <div
+                  key={index}
+
+                  // data-aos="zoom-in" data-aos-delay={delay}
+                >
+                  <div className="hidden">{(delay += 200)}</div>
+                  <Link href={item.link}>
+                    <a>
+                      <div className="flex flex-col justify-center items-center text-center transition-all duration-500 hover:scale-75 mt-[-2rem]">
+                        <img
+                          src={item.img}
+                          alt=""
+                          className="h-[3rem] max-w-[4rem] object-contain"
+                        />
+                        <p className="text-sm w-[9rem] mt-1 ">{item.name}</p>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default PlatformSolution;
+export default PlatformDropdown;

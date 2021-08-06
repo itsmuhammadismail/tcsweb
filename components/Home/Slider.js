@@ -79,7 +79,7 @@ const Slider = () => {
           </div>
         </div>
         <div className="max-w-[31rem] ">
-          <h2 className="font-bold text-xl mb-1">{slide.heading}</h2>
+          <h2 className="font-bold text-xl mb-1 text-white">{slide.heading}</h2>
           <p className="text-sm">{slide.para}</p>
         </div>
       </div>

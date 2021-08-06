@@ -1,6 +1,7 @@
 import Link from "next/link";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import Dropdown from "./Dropdown";
+import PlatformDropdown from "./PlatformDropdown";
 
 const Nav = () => {
   return (
@@ -8,14 +9,18 @@ const Nav = () => {
       <ul className="flex gap-4 items-center">
         <li className="cursor-pointer relative nav">Track</li>
         <li className="cursor-pointer relative nav ">
-          <div className="flex justify-center items-center">TCS Kardo</div>
+          <Link href="/tcs-kardo">
+            <a>
+              <div className="flex justify-center items-center">TCS Kardo</div>
+            </a>
+          </Link>
         </li>
         <li className="cursor-pointer nav ">
           <div className="flex justify-center items-center">
             Platform Services
             <KeyboardArrowDownIcon />
           </div>
-          <Dropdown
+          {/* <Dropdown
             items={{
               Domestic: [
                 "Express",
@@ -55,7 +60,8 @@ const Nav = () => {
                 "TCS for Business",
               ],
             }}
-          />
+          /> */}
+          <PlatformDropdown />
         </li>
         <Link href="/customer-services">
           <a>
