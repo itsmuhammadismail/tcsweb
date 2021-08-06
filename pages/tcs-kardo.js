@@ -18,9 +18,7 @@ const TCSKardo = () => {
   const [customer, setCustomer] = useState("");
   const [shipping, setShipping] = useState("");
 
-  const [selectedDate, setSelectedDate] = useState(
-    new Date("2014-08-18T21:11:54")
-  );
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
