@@ -157,7 +157,7 @@ const PlatformSolution = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center my-[5rem]">
+    <div className="lg:container mx-auto flex flex-col justify-center items-center my-[5rem] xl:h-[50vh]">
       <h1
         className="font-bold text-4xl text-[#373737]"
         // data-aos="fade-right"
