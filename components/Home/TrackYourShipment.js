@@ -5,7 +5,7 @@ const TrackYourShipment = () => {
         backgroundImage: "url('/Home/slider.png')",
         // backgroundSize: "cover !important",
       }}
-      className="bg-center bg-no-repeat  h-[25rem] xl:h-[75vh]  w-full flex justify-center items-center zoom"
+      className="bg-center bg-no-repeat  h-[20rem] xl:h-[75vh]  w-full flex justify-center items-center zoom"
     >
       <div className="mt-[-5rem] text-center md:text-left">
         <h2
