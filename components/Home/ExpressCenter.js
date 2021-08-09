@@ -2,7 +2,7 @@ const ExpressCenter = () => {
   return (
     <div className="flex flex-col justify-center items-center  bg-[#f6f9fc]">
       <h1
-        className="font-bold text-3xl pt-[4rem] text-[#373737]"
+        className="font-bold text-4xl pt-[4rem] text-[#373737]"
         // data-aos="fade-left"
       >
         Express Center

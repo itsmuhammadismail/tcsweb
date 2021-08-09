@@ -2,7 +2,7 @@ import Slider from "./Slider";
 
 const TCSRoleInCSR = () => {
   return (
-    <div className="flex flex-col justify-center py-[7rem] pl-[7rem] text-[#373737]">
+    <div className="xl:container mx-auto flex flex-col justify-center py-[7rem] pl-[7rem] text-[#373737]">
       <h1 className="font-bold text-4xl max-w-[23rem] ">
         TCS's role in CSR activities in Pakistan
       </h1>
