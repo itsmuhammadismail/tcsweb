@@ -21,7 +21,7 @@ app.prepare().then(() => {
     } else {
       handle(req, res, parsedUrl)
     }
-  }).listen(80, (err) => {
+  }).listen(process.env.PORT, (err) => {
     if (err) throw err
     console.log('> Ready on ')
   })
