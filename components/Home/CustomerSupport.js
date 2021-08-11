@@ -2,7 +2,7 @@ import Fade from "react-reveal/Fade";
 
 const CustomerSupport = () => {
   return (
-    <div className="flex px-[7rem] xl:h-[80vh]  text-[#373737]">
+    <div className="flex px-[7rem] xl:h-[80vh]  text-[#373737] ">
       <div className="max-w-[70rem] mx-auto flex justify-between items-center">
         <div className="flex gap-6 flex-1 pr-[3rem]">
           <div className="flex flex-col gap-6 ">
