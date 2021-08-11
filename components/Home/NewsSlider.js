@@ -25,10 +25,10 @@ export default function NewsSlider() {
       >
         <SwiperSlide className="cursor-pointer">
           <div
-            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
+            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working1.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem] xl:mt-[13rem] text-white">
+            <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Community Learning
             </h1>
             <p>Industry-wide meetups, events and conferences.</p>
@@ -36,10 +36,10 @@ export default function NewsSlider() {
         </SwiperSlide>
         <SwiperSlide className="cursor-pointer">
           <div
-            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
+            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working2.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem] xl:mt-[13rem] text-white">
+            <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Health Insurance
             </h1>
             <p>Industry-wide meetups, events and conferences.</p>
@@ -47,10 +47,10 @@ export default function NewsSlider() {
         </SwiperSlide>
         <SwiperSlide className="cursor-pointer">
           <div
-            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
+            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working3.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem] xl:mt-[13rem] text-white">
+            <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Your Work, Your Time
             </h1>
             <p>Industry-wide meetups, events and conferences.</p>
@@ -58,10 +58,10 @@ export default function NewsSlider() {
         </SwiperSlide>
         <SwiperSlide className="cursor-pointer">
           <div
-            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
+            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/working1.png')" }}
           >
-            <h1 className="text-2xl font-bold mt-[8rem] xl:mt-[13rem] text-white">
+            <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Community Learning
             </h1>
             <p>Industry-wide meetups, events and conferences.</p>
