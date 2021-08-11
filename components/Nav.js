@@ -15,6 +15,7 @@ const Nav = () => {
             </a>
           </Link>
         </li>
+        
         <li className="cursor-pointer nav ">
           <div className="flex justify-center items-center">
             Platform Services
@@ -61,8 +62,10 @@ const Nav = () => {
               ],
             }}
           /> */}
+          
           <PlatformDropdown />
         </li>
+        <div className="backdropdown absolute left-0 right-0 bottom-0 top-[20rem] bg-black z-10 opacity-50"></div>
         <Link href="/customer-services">
           <a>
             <li className="cursor-pointer">Customer Services</li>

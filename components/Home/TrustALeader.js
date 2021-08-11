@@ -35,7 +35,7 @@ const TrustALeader = () => {
           // data-aos="fade-right" data-aos-delay="200"
         />
         <div className="flex justify-between items-center mt-[1rem] ">
-          <div className="flex-1 flex justify-center flex-wrap max-w-[30rem] 2xl:max-w-[40rem] 2xl:gap-4 ">
+          <div className="flex-1 flex justify-center flex-wrap max-w-[30rem]  ">
             <div
               className="flex-1 min-w-[10rem] h-[13rem] cursor-pointer"
               onClick={handleMap}
@@ -137,7 +137,7 @@ const TrustALeader = () => {
             <img
               src={`/Home/${map}.png`}
               alt=""
-              className="max-w-[30rem] xl:max-w-[34rem] object-contain"
+              className="max-w-[30rem]  object-contain"
             />
           </motion.div>
         </div>

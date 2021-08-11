@@ -215,12 +215,12 @@ a:hover {
   transition-delay: 0s, 0.4s;
 }
 
-.nav .backdropdown {
-  display: none;
+.nav+.backdropdown {
+  visibility: hidden;
 }
 
-.nav:hover .backdropdown {
-  display: block;
+.nav:hover+.backdropdown {
+  visibility: visible;
 }
 
 .graywhitegradient {

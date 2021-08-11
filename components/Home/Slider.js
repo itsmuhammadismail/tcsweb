@@ -61,8 +61,8 @@ const Slider = () => {
   // }, [count]);
 
   return (
-    <div className="flex-1  self-end">
-      <div className="bg-[#ED1C24] text-white rounded-l-md px-[6rem] pb-[3rem] pt-[6rem]">
+    <div className="flex-1  self-end max-w-[45rem]">
+      <div className="bg-[#ED1C24] text-white rounded-l-md px-[6rem] pb-[3rem] pt-[6rem] h-[15rem]">
         <div className="relative flex gap-1">
           <motion.div className="absolute top-[-13rem] ">
             <img src={slide.img1} alt="" className="w-[10rem] object-contain" />
