@@ -4,7 +4,6 @@ const { parse } = require("url");
 const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
-// const dev = false;
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -22,7 +21,7 @@ app.prepare().then(() => {
     } else {
       handle(req, res, parsedUrl);
     }
-  }).listen(8080, (err) => {
+  }).listen(3000, (err) => {
     if (err) throw err;
     console.log("> Ready on ");
   });
