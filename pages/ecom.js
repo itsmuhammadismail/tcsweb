@@ -224,23 +224,33 @@ const Ecom = () => {
                 <p className="mt-2 mb-[-1rem] text-lg">Selling Medium</p>
                 <FormGroup row>
                   <FormControlLabel
-                    control={<Checkbox name="checkedB" color="primary" />}
+                    control={
+                      <Checkbox name="checkedB" iconStyle={{ fill: "red" }} />
+                    }
                     label={<p className="text-sm">Facebook</p>}
                   />
                   <FormControlLabel
-                    control={<Checkbox name="checkedB" color="primary" />}
+                    control={
+                      <Checkbox name="checkedB" iconStyle={{ fill: "red" }} />
+                    }
                     label={<p className="text-sm">WhatsApp</p>}
                   />
                   <FormControlLabel
-                    control={<Checkbox name="checkedB" color="primary" />}
+                    control={
+                      <Checkbox name="checkedB" iconStyle={{ fill: "red" }} />
+                    }
                     label={<p className="text-sm">Website</p>}
                   />
                   <FormControlLabel
-                    control={<Checkbox name="checkedB" color="primary" />}
+                    control={
+                      <Checkbox name="checkedB" iconStyle={{ fill: "red" }} />
+                    }
                     label={<p className="text-sm">Instagram</p>}
                   />
                   <FormControlLabel
-                    control={<Checkbox name="checkedB" color="primary" />}
+                    control={
+                      <Checkbox name="checkedB" iconStyle={{ fill: "red" }} />
+                    }
                     label={<p className="text-sm">Others</p>}
                   />
                 </FormGroup>
@@ -434,43 +444,88 @@ const Ecom = () => {
                   <FormGroup row>
                     <div className="flex-1 flex flex-col">
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Clothing</p>}
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Books</p>}
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Watches</p>}
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={
                           <p className="text-sm">Perfumes and Cosmetics</p>
                         }
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Sports</p>}
                       />
                     </div>
                     <div className="flex-1 flex flex-col">
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Home Decor</p>}
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Home Appliances</p>}
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={<p className="text-sm">Health and Fitness</p>}
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={
                           <p className="text-sm">
                             Mobile and Tablets (PTA Approved)
@@ -478,7 +533,12 @@ const Ecom = () => {
                         }
                       />
                       <FormControlLabel
-                        control={<Checkbox name="checkedB" color="primary" />}
+                        control={
+                          <Checkbox
+                            name="checkedB"
+                            iconStyle={{ fill: "red" }}
+                          />
+                        }
                         label={
                           <p className="text-sm">
                             Computer, Peripherals and Accessories
@@ -515,7 +575,7 @@ const Ecom = () => {
                         <Checkbox
                           checked={true}
                           name="checkedB"
-                          color="primary"
+                          iconStyle={{ fill: "red" }}
                         />
                       }
                       label={
@@ -538,7 +598,7 @@ const Ecom = () => {
                         <Checkbox
                           checked={true}
                           name="checkedB"
-                          color="primary"
+                          iconStyle={{ fill: "red" }}
                         />
                       }
                       label={

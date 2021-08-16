@@ -379,25 +379,25 @@ const Corporate = () => {
                         <div className="flex-1 flex flex-col">
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={<p className="text-sm">Clothing</p>}
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={<p className="text-sm">Books</p>}
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={<p className="text-sm">Watches</p>}
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={
                               <p className="text-sm">Perfumes and Cosmetics</p>
@@ -405,7 +405,7 @@ const Corporate = () => {
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={<p className="text-sm">Sports</p>}
                           />
@@ -413,19 +413,19 @@ const Corporate = () => {
                         <div className="flex-1 flex flex-col">
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={<p className="text-sm">Home Decor</p>}
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={<p className="text-sm">Home Appliances</p>}
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={
                               <p className="text-sm">Health and Fitness</p>
@@ -433,7 +433,7 @@ const Corporate = () => {
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={
                               <p className="text-sm">
@@ -443,7 +443,7 @@ const Corporate = () => {
                           />
                           <FormControlLabel
                             control={
-                              <Checkbox name="checkedB" color="primary" />
+                              <Checkbox name="checkedB" iconStyle={{fill: 'red'}} />
                             }
                             label={
                               <p className="text-sm">
