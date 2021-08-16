@@ -140,6 +140,11 @@ a:hover {
 
 .hr {
   @apply w-[4rem] h-2 bg-[#ED1C24] rounded-full my-[1rem];
+  /* width: 4rem !important;
+  height: 0.5rem !important;
+  background-color: #ed1c24 !important;
+  border-radius: 999 !important;
+  margin: 1rem 0 !important; */
 }
 
 .moreBtn {
@@ -215,11 +220,11 @@ a:hover {
   transition-delay: 0s, 0.4s;
 }
 
-.nav+.backdropdown {
+.nav + .backdropdown {
   visibility: hidden;
 }
 
-.nav:hover+.backdropdown {
+.nav:hover + .backdropdown {
   visibility: visible;
 }
 
@@ -255,6 +260,12 @@ a:hover {
   100% {
     transform: scale(1, 1);
   }
+}
+.shadow-card {
+  --tw-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.02),
+    0 0px 6px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-my {
@@ -311,4 +322,36 @@ a:hover {
 }
 .MuiDialogActions-spacing button span {
   color: #f21e26 !important;
+}
+
+.opacity-animate {
+  animation: opacity 1s;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rowflex {
+  flex-direction: row !important;
+}
+
+.MuiIconButton-label .PrivateSwitchBase-input-15 {
+  display: none !important;
+}
+
+.MuiIconButton-root {
+  padding: 4px 12px !important;
+}
+
+.ant-btn-primary {
+  background-color: #d40511;
+}
+.ant-btn-primaryLhover {
+  background-color: #f21e26;
 }

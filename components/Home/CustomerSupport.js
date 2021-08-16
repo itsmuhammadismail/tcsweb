@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Fade from "react-reveal/Fade";
 
 const CustomerSupport = () => {
@@ -41,7 +42,10 @@ const CustomerSupport = () => {
             </p>
           </Fade>
           <Fade right delay={200}>
-            <button className="moreBtn">More Details</button>
+            <Link href="/customer-services">
+            <a>
+            <button className="moreBtn">More Details</button></a>
+            </Link>
           </Fade>
         </div>
       </div>

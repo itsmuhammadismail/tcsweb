@@ -6,7 +6,9 @@ const PlatformSolutionBox = ({ items }) => {
   return (
     <div
       className={`flex justify-center items-center gap-[4rem] mt-10 flex-wrap pt-[2rem] cursor-pointer  ${
-        items.length !== 6 ? "max-w-[70rem]" : "max-w-[50rem]"
+        items.length > 6
+          ? "max-w-[70rem]"
+          : (items.length === 6 ? "max-w-[50rem]" : "max-w-[40rem]")
       }`}
     >
       {items.map((item, index) => (

@@ -18,7 +18,7 @@ const Cards = () => {
           <Card title={"TCS Near You"} img={"/Home/tcsNearYou.png"} />
         </a>
       </Link>
-      <Link href="/">
+      <Link href="/rate-calculator">
         <a className="hover:z-50" data-aos="zoom-in" data-aos-delay="700">
           <Card title={"Rate Calculator"} img={"/Home/RateCalculator.png"} />
         </a>

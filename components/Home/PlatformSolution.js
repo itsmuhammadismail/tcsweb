@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PlatformSolutionBox from "./PlatformSolutionBox";
-import { motion } from "framer-motion";
-import Fade from "react-reveal/Fade";
+// import { motion } from "framer-motion";
+// import Fade from "react-reveal/Fade";
 
 const PlatformSolution = () => {
   const [selected, setSelected] = useState("Domestic");
@@ -157,17 +157,13 @@ const PlatformSolution = () => {
   };
 
   return (
-    <div className="lg:container mx-auto flex flex-col  items-center my-[5rem] mt-[7rem] xl:h-[50vh]">
+    <div className="lg:container mx-auto grid justify-items-center items-center my-[5rem] mt-[7rem] xl:h-[50vh] ">
       <h1
         className="font-bold text-4xl text-[#373737]"
-        // data-aos="fade-right"
       >
         Platform Solution
       </h1>
-      <hr
-        className="hr"
-        // data-aos="fade-right" data-aos-delay="200"
-      />
+      <hr className="hr" />
       <ul className="flex flex-col md:flex-row text-sm text-center gap-4 md:gap-12 mt-4">
         {list.map((item, index) => (
           <li
@@ -187,6 +183,7 @@ const PlatformSolution = () => {
         ))}
       </ul>
       <div>
+      
         <PlatformSolutionBox items={items} />
       </div>
     </div>

@@ -15,7 +15,7 @@ import {
 } from "@material-ui/pickers";
 import { useRouter } from "next/dist/client/router";
 
-const TCSKardo = () => {
+const RateCalculator = () => {
   const [customer, setCustomer] = useState("");
   const [shipping, setShipping] = useState("");
 
@@ -77,57 +77,13 @@ const TCSKardo = () => {
       </Head>
       <Layout>
         <div className="bg-[#efefef] flex flex-col justify-center items-center h-[150px]">
-          <h1 className="text-[40px] font-bold">TCS Kardo</h1>
+          <h1 className="text-[40px] font-bold">Rate Calculator</h1>
           <p className="text-[1.05rem] mt-[-5px]">
             Please tell us more about yourself
           </p>
         </div>
-        <div className="my-[3rem]">
+        <div className="my-[3rem] mb-[5rem]">
           <div className="flex flex-col justify-center items-center">
-            <p>I am a</p>
-            <div className="flex gap-4 my-4">
-              <button
-                onClick={() => setCustomer("new")}
-                className="shadow-my-lg text-sm w-[22rem] h-[3rem] hover:bg-[#F21E26] hover:text-white rounded-md transition-all duration-500"
-              >
-                New Customer
-              </button>
-              <button
-                onClick={() => setCustomer("existing")}
-                className="shadow-my-lg text-sm w-[22rem] h-[3rem] hover:bg-[#F21E26] hover:text-white rounded-md transition-all duration-500"
-              >
-                Existing Customer
-              </button>
-            </div>
-          </div>
-          {customer == "new" && (
-            <div className="flex flex-col justify-center items-center ">
-              <p>Single Shipment or Regular Shipping?</p>
-              <div className="flex gap-4 my-4">
-                <div className="flex flex-col gap-1 p-4 shadow-my-lg text-sm w-[22rem] h-[7.5rem]  rounded-md transition-all duration-500">
-                  <h2 className="font-bold text-[1.1rem]">Single Shipment</h2>
-                  <p>One Origin & Destination</p>
-                  <button
-                    onClick={() => setShipping("single")}
-                    className="text-[#F21E26] border border-[#F21E26] w-full rounded-md mt-1 p-1 h-[2.5rem] text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
-                  >
-                    Get a Quote
-                  </button>
-                </div>
-                <div className="flex flex-col gap-1 p-4 shadow-my-lg text-sm w-[22rem] h-[7.5rem]  rounded-md transition-all duration-500">
-                  <h2 className="font-bold text-[1.1rem]">Regular Shipping</h2>
-                  <p>Including Multiple Origins & Destinations</p>
-                  <button
-                    onClick={() => setShipping("regular")}
-                    className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-md mt-1 p-1 h-[2.5rem] text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
-                  >
-                    Open an Account
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-          {shipping == "single" && (
             <div className="flex flex-col justify-center items-center mt-[1rem]">
               <div className="flex flex-col gap-1 p-4 shadow-my-lg text-sm w-[45rem] rounded-md transition-all duration-500">
                 <h2 className="font-bold text-[1.1rem]">Get a Quote</h2>
@@ -233,98 +189,11 @@ const TCSKardo = () => {
                 </Link>
               </div>
             </div>
-          )}
-          {shipping == "regular" && (
-            <div className="flex flex-col justify-center items-center mt-[1rem] ">
-              <div className="flex flex-col gap-3 p-4 shadow-my-lg text-sm w-[45rem] rounded-md transition-all duration-500">
-                <h2 className="font-bold text-[1.1rem]">
-                  Please Select a Product Type
-                </h2>
-                <div className="flex gap-4">
-                  <div className="flex-1 flex flex-col">
-                    <FormControl
-                      variant="outlined"
-                      className="flex-1"
-                      size="small"
-                      inputProps={{ style: { fontSize: 14 } }} // font size of input text
-                      InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                    >
-                      <InputLabel
-                        id="demo-simple-select-outlined-label"
-                        style={{ fontSize: "14px !important" }}
-                      >
-                        Product Type
-                      </InputLabel>
-                      <Select
-                        required
-                        labelId="demo-simple-select-outlined-label"
-                        id="demo-simple-select-outlined"
-                        // value={age}
-                        // onChange={handleChange}
-                        label="Product Type"
-                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
-                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                        onChange={handleProduct}
-                      >
-                        {productDropdown.map((product, index) => (
-                          <MenuItem key={index} value={product}>
-                            {product}
-                          </MenuItem>
-                        ))}
-                      </Select>
-                    </FormControl>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="flex-1 flex flex-col">
-                    {product2Dropdown.length !== 0 && (
-                      <FormControl
-                        variant="outlined"
-                        className="flex-1"
-                        size="small"
-                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
-                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                      >
-                        <InputLabel
-                          id="demo-simple-select-outlined-label"
-                          style={{ fontSize: "14px !important" }}
-                        >
-                          Subcategory
-                        </InputLabel>
-                        <Select
-                          required
-                          labelId="demo-simple-select-outlined-label"
-                          id="demo-simple-select-outlined"
-                          // value={age}
-                          // onChange={handleChange}
-                          label="Subcategory"
-                          inputProps={{ style: { fontSize: 14 } }} // font size of input text
-                          InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                        >
-                          {product2Dropdown.map((product, index) => (
-                            <MenuItem key={index} value={product}>
-                              {product}
-                            </MenuItem>
-                          ))}
-                        </Select>
-                      </FormControl>
-                    )}
-                  </div>
-                </div>
-
-                <button
-                  onClick={handleAccount}
-                  className="text-white bg-[#D40511] border border-[#F21E26] w-full rounded-md mt-1 p-1 h-[2.5rem] text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
-                >
-                  Open an Account
-                </button>
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </Layout>
     </div>
   );
 };
 
-export default TCSKardo;
+export default RateCalculator;

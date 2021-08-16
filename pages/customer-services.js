@@ -3,6 +3,7 @@ import { useState } from "react";
 import Layout from "../components/Layout";
 import PhoneIcon from "@material-ui/icons/Phone";
 import SimpleAccordion from "../components/Home/Accordian";
+import { TextField } from "@material-ui/core";
 
 const CustomerServices = () => {
   return (
@@ -38,11 +39,11 @@ const CustomerServices = () => {
               eiusmod tempor incididunt ut labore et dolore.
             </p>
             <div className="flex gap-6">
-              <img src="/social/fb2.png" alt="" className="h-[1.2rem]" />
-              <img src="/social/twitter2.png" alt="" className="h-[1.2rem]" />
-              <img src="/social/insta2.png" alt="" className="h-[1.2rem]" />
-              <img src="/social/youtube.png" alt="" className="h-[1.2rem]" />
-              <img src="/social/linkedin2.png" alt="" className="h-[1.2rem]" />
+              <img src="/social/fb2.png" alt="" className="h-[1.2rem] social" />
+              <img src="/social/twitter2.png" alt="" className="h-[1.2rem] social" />
+              <img src="/social/insta2.png" alt="" className="h-[1.2rem] social" />
+              <img src="/social/youtube.png" alt="" className="h-[1.2rem] social" />
+              <img src="/social/linkedin2.png" alt="" className="h-[1.2rem] social" />
             </div>
           </div>
         </div>
@@ -50,30 +51,56 @@ const CustomerServices = () => {
           <h1 className="font-bold text-4xl mb-[3rem]">Contact Us</h1>
           <div className="flex gap-4 ">
             <div className="flex flex-col gap-8">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="border p-2 text-sm w-[25rem] focus:outline-none"
+              <TextField
+                required
+                id="outlined-required"
+                label="Your Name"
+                variant="outlined"
+                size="small"
+                inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                className="w-[25rem]"
               />
-              <input
-                type="text"
-                placeholder="Your Email"
-                className="border p-2 text-sm w-[25rem] focus:outline-none"
+              <TextField
+                required
+                id="outlined-required"
+                label="Your Email"
+                variant="outlined"
+                size="small"
+                inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                className="w-[25rem]"
               />
-              <input
-                type="text"
-                placeholder="Your Contact Number"
-                className="border p-2 text-sm w-[25rem] focus:outline-none"
+              <TextField
+                required
+                id="outlined-required"
+                label="Your Contact Number"
+                variant="outlined"
+                size="small"
+                inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                className="w-[25rem]"
               />
             </div>
-            <div className="flex flex-col gap-7">
-              <textarea
+            <div className="flex flex-col gap-[2.1rem]">
+              {/* <textarea
                 name=""
                 id=""
                 className="border p-2 text-sm w-[25rem] h-[7rem] focus:outline-none resize-none"
                 placeholder="Your Message"
-              ></textarea>
-              <button className="text-sm bg-[#D40511] hover:bg-[#F21E26] text-white p-2 w-full md:w-[10rem] rounded-r-sm transition-all duration-500">
+              ></textarea> */}
+              <TextField
+                multiline
+                id="outlined-required"
+                label="Your Message"
+                variant="outlined"
+                size="small"
+                inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                rows={4}
+                className="w-[25rem]"
+              />
+              <button className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
                 SUBMIT
               </button>
             </div>

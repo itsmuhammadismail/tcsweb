@@ -157,7 +157,6 @@ const PlatformDropdown = () => {
   };
   return (
     <>
-      
       <div className="absolute dropdown w-[100vw] left-0 ">
         <div
           className="absolute w-6 h-6 bg-white top-[0.4rem] right-[28%]"
@@ -186,7 +185,11 @@ const PlatformDropdown = () => {
           <div>
             <div
               className={`flex justify-center items-center gap-[4rem] mt-10 flex-wrap  cursor-pointer pt-[1rem]  ${
-                items.length !== 6 ? "max-w-[70rem]" : "max-w-[50rem]"
+                items.length > 6
+                  ? "max-w-[70rem]"
+                  : items.length === 6
+                  ? "max-w-[50rem]"
+                  : "max-w-[40rem]"
               }`}
             >
               {items.map((item, index) => (

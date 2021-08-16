@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="">
+    <footer className="border-t">
       <div className="lg:container mx-auto flex p-[7rem] gap-6">
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
@@ -44,9 +44,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#f1f1f1]">
-        <div className="lg:container mx-auto flex justify-between p-6 text-sm text-[#606060] flex-col md:flex-row items-center">
+        <div className="lg:container mx-auto flex justify-between items-center p-6 text-sm text-[#606060] flex-col md:flex-row">
           <div>2021 &copy; TCS EXPRESS. All rights reserved</div>
-          <ul className="flex gap-3 md:gap-6 mt-3 text-xs md:text-sm link">
+          <ul className="flex gap-3 md:gap-6  text-xs md:text-sm link">
             <li>Terms of Use</li>
             <li>Fraud Prevention</li>
             <li>Privacy Policy</li>
