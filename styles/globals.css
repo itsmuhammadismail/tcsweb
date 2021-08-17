@@ -283,16 +283,16 @@ a:hover {
 
 @keyframes zoom {
   0% {
-    background-size: cover;
+    background-size: auto 110%;
   }
   100% {
-    background-size: calc(cover+130%);
+    background-size: auto 130%;
   }
 }
 .zoom {
   z-index: 1;
-  /* animation: zoom 12s; */
-  background-size: auto 100%;
+  animation: zoom 12s;
+  background-size: auto 130%;
 }
 .MuiPaper-elevation1 {
   box-shadow: unset !important;
@@ -354,4 +354,21 @@ a:hover {
 }
 .ant-btn-primaryLhover {
   background-color: #f21e26;
+}
+
+.placeholder::placeholder {
+  color: white;
+}
+
+@keyframes placeholder {
+  from {
+    width: 5rem;
+  }
+  to {
+    width: 15rem;
+  }
+}
+.placeholder {
+  animation: placeholder 1s;
+  width: 15rem;
 }

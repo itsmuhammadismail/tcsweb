@@ -52,7 +52,7 @@ const Track = ({}) => {
             </div>
           </div>
         </div>
-        {trackState !== "" && trackState !== undefined && (
+        {trackState !== "" && trackState !== undefined ? (
           <div className="flex justify-center items-center ">
             <div className="w-[70rem]">
               <div className="flex gap-4">
@@ -198,6 +198,8 @@ const Track = ({}) => {
               </div>
             </div>
           </div>
+        ) : (
+          <div className="h-[15rem]"></div>
         )}
       </Layout>
     </div>

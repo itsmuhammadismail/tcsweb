@@ -15,7 +15,6 @@ const TrackYourShipment = () => {
     <div
       style={{
         backgroundImage: "url('/Home/slider.png')",
-        backgroundSize: "cover !important",
       }}
       className="bg-center bg-no-repeat  h-[20rem] xl:h-[57vh]  w-full flex justify-center items-center zoom"
     >
