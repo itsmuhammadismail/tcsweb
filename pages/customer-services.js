@@ -40,17 +40,33 @@ const CustomerServices = () => {
             </p>
             <div className="flex gap-6">
               <img src="/social/fb2.png" alt="" className="h-[1.2rem] social" />
-              <img src="/social/twitter2.png" alt="" className="h-[1.2rem] social" />
-              <img src="/social/insta2.png" alt="" className="h-[1.2rem] social" />
-              <img src="/social/youtube.png" alt="" className="h-[1.2rem] social" />
-              <img src="/social/linkedin2.png" alt="" className="h-[1.2rem] social" />
+              <img
+                src="/social/twitter2.png"
+                alt=""
+                className="h-[1.2rem] social"
+              />
+              <img
+                src="/social/insta2.png"
+                alt=""
+                className="h-[1.2rem] social"
+              />
+              <img
+                src="/social/youtube.png"
+                alt=""
+                className="h-[1.2rem] social"
+              />
+              <img
+                src="/social/linkedin2.png"
+                alt=""
+                className="h-[1.2rem] social"
+              />
             </div>
           </div>
         </div>
         <div className="flex flex-col justify-center items-center my-[3rem]">
           <h1 className="font-bold text-4xl mb-[3rem]">Contact Us</h1>
           <div className="flex gap-4 ">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
               <TextField
                 required
                 id="outlined-required"
@@ -82,25 +98,18 @@ const CustomerServices = () => {
                 className="w-[25rem]"
               />
             </div>
-            <div className="flex flex-col gap-[2.1rem]">
-              {/* <textarea
-                name=""
-                id=""
-                className="border p-2 text-sm w-[25rem] h-[7rem] focus:outline-none resize-none"
-                placeholder="Your Message"
-              ></textarea> */}
+            <div className="flex flex-col gap-4">
               <TextField
                 multiline
                 id="outlined-required"
                 label="Your Message"
                 variant="outlined"
                 size="small"
-                inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                inputProps={{ style: { fontSize: 14, height: "4.3rem" } }} // font size of input text
                 InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                rows={4}
                 className="w-[25rem]"
               />
-              <button className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
+              <button className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md  p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
                 SUBMIT
               </button>
             </div>

@@ -365,10 +365,13 @@ a:hover {
     width: 5rem;
   }
   to {
-    width: 15rem;
+    width: 16.5rem;
   }
 }
 .placeholder {
   animation: placeholder 1s;
-  width: 15rem;
+  width: 16.5rem;
+}
+.placeholder-close {
+  display: none;
 }

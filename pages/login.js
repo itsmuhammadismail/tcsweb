@@ -17,7 +17,7 @@ const Rates = () => {
             eiusmod tempor incididunt ut labore et dolore.
           </p>
         </div>
-        <div className="flex justify-center items-center mt-12">
+        <div className="flex justify-center items-center my-12">
           <div className="flex gap-6 justify-center items-center flex-wrap max-w-[60rem]">
             <div className="flex flex-col justify-center items-center w-[18rem] border rounded-sm">
               <img src="/mytcs.png" alt="" />

@@ -7,9 +7,15 @@ import Dropdown from "./Dropdown";
 import { useState } from "react";
 
 const Header = () => {
+  const [searchClass, setSearchClass] = useState("");
   const [searched, setSearched] = useState(false);
   const handleSearch = () => {
+    setSearchClass("");
     setSearched(true);
+  };
+  const closeSearch = () => {
+    setSearched(false);
+    setSearchClass("placeholder-close");
   };
   return (
     <header className="bg-[#F21E26] pt-4 pb-4">
@@ -20,19 +26,23 @@ const Header = () => {
           </a>
         </Link>
         <div className="text-white text-sm font-light flex-col hidden lg:flex">
-          <div className="flex gap-6 mb-2 self-end">
-            <div className="nav cursor-pointer">
+          <div className={`flex mb-2 self-end ${searched ? "gap-[0rem]" : "gap-6"}`}>
+            <div className={`nav cursor-pointer ${searched && "mr-[-0.41rem]"} `}>
               Pakistan <KeyboardArrowDownIcon />
               <Dropdown items={["UAE", "UK"]} />
             </div>
 
             {searched ? (
-              <div className="flex  items-center">
-                <SearchIcon fontSize="small" className="relative left-7" />
+              <div className={`flex items-center ${searchClass}`}>
+                <SearchIcon
+                  fontSize="small"
+                  className="relative left-7 cursor-pointer"
+                  onClick={closeSearch}
+                />
                 <input
                   type="text"
                   placeholder={`Search text here`}
-                  className="bg-[#e2141b] text-white text-xs px-2 py-[0.25rem] pl-8 placeholder focus:outline-none"
+                  className={`bg-[#e2141b] text-white text-xs px-2 py-[0.25rem] pl-8 placeholder focus:outline-none`}
                 />
               </div>
             ) : (

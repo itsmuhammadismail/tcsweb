@@ -19,13 +19,13 @@ const TCSNearYou = () => {
           </p>
         </div>
         <Map />
-        <div className="lg:container mx-auto flex flex-col justify-center items-center py-[5rem]">
+        <div className="lg:container mx-auto flex flex-col justify-center items-center py-[5rem] ">
           <h1 className="font-bold text-3xl text-[#373737]">
             Find us in these cities
           </h1>
           <hr className="hr" />
 
-          <div className="mt-4 flex flex-wrap justify-center items-center gap-4">
+          <div className="mt-4 flex flex-wrap justify-center items-center gap-4 max-w-[70rem]">
             <div className="relative flex justify-center items-center max-w-[20rem]">
               <img src="/cities/Karachi.png" alt="" />
               <p className="absolute bottom-4 text-white font-semibold text-xl">

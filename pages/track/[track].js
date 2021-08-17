@@ -14,7 +14,8 @@ const Track = ({}) => {
     setTrackState(track);
   }, [track]);
 
-  const handleTrack = () => {
+  const handleTrack = (e) => {
+    e.preventDefault();
     setTrackState(trackInput.current.value);
   };
 
@@ -26,8 +27,8 @@ const Track = ({}) => {
         <link rel="icon" href="/favicon-16x16.png" />
       </Head>
       <Layout>
-        <img src="/track.png" alt="" className="w-full" />
-        <div className="my-8 mb-16">
+        <img src="/image.png" alt="" className="w-full" />
+        <form className="my-8 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-semibold">Track Your Shipment</h2>
             <p>
@@ -45,13 +46,14 @@ const Track = ({}) => {
               />
               <button
                 onClick={handleTrack}
+                type="submit"
                 className="bg-[#D40511] text-white p-3 w-full md:w-[10rem] rounded-r-sm transition-all duration-500 gradientbg"
               >
                 Track Shipment
               </button>
             </div>
           </div>
-        </div>
+        </form>
         {trackState !== "" && trackState !== undefined ? (
           <div className="flex justify-center items-center ">
             <div className="w-[70rem]">
@@ -114,8 +116,8 @@ const Track = ({}) => {
                 Track History:
               </h2>
               <div className="flex-1">
-                <div className="flex relative top-[0.6rem] pl-[2rem] pr-[3rem]">
-                  <hr className="border-t-4 border-dotted w-[14rem] border-[#ec1c23be]" />
+                <div className="flex relative top-[0.6rem] pl-[2rem] pr-[2rem]">
+                  <hr className="border-t-4 border-dotted w-[16rem] border-[#ec1c23be]" />
                   <hr className="border-t-4 border-dotted flex-1 border-[#ec1c23be]" />
                   <hr className="border-t-4 border-dotted flex-1 border-[#d8d8d8]" />
                   <hr className="border-t-4 border-dotted flex-1 border-[#d8d8d8]" />
@@ -146,7 +148,7 @@ const Track = ({}) => {
                   <div className="flex flex-col items-center gap-2">
                     <div className="bg-[#d8d8d8] w-[1rem] h-[1rem] rounded-full"></div>
                     <p className="text-sm max-w-[7rem] text-center">
-                      Delivered signed by USMAN
+                      Delivered
                     </p>
                   </div>
                 </div>
@@ -160,7 +162,7 @@ const Track = ({}) => {
                       <th className="border p-2">Location</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="text-xs">
                     <tr>
                       <td className="border p-2">13-AUG-21 16:10</td>
                       <td className="border p-2">
