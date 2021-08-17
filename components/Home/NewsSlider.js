@@ -17,11 +17,12 @@ export default function NewsSlider() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={2.8}
+        centeredSlides={true}
         spaceBetween={30}
         navigation={true}
         loop={true}
-        className="mySwiper text-white"
+        className="mySwiper text-white "
       >
         <SwiperSlide className="cursor-pointer">
           <div
