@@ -7,7 +7,11 @@ const Nav = () => {
   return (
     <nav className="">
       <ul className="flex gap-4 items-center">
-        <li className="cursor-pointer relative nav">Track</li>
+        <Link href="/track">
+          <a>
+            <li className="cursor-pointer relative nav">Track</li>
+          </a>
+        </Link>
         <li className="cursor-pointer relative nav ">
           <Link href="/tcs-kardo">
             <a>
@@ -15,7 +19,7 @@ const Nav = () => {
             </a>
           </Link>
         </li>
-        
+
         <li className="cursor-pointer nav ">
           <div className="flex justify-center items-center">
             Platform Services
@@ -62,7 +66,7 @@ const Nav = () => {
               ],
             }}
           /> */}
-          
+
           <PlatformDropdown />
         </li>
         <div className="backdropdown absolute left-0 right-0 bottom-0 top-[20rem] bg-black z-10 opacity-50"></div>

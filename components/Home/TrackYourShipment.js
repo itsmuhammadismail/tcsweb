@@ -1,5 +1,16 @@
+import { useRouter } from "next/dist/client/router";
+import { useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
 const TrackYourShipment = () => {
+  const trackInput = useRef();
+  const route = useRouter();
+  const [trackState, setTrackState] = useState("");
+  const handleTrack = () => {
+    if (trackInput.current.value !== "") {
+      setTrackState(trackInput.current.value);
+      route.push("/track/" + trackInput.current.value);
+    }
+  };
   return (
     <div
       style={{
@@ -15,17 +26,17 @@ const TrackYourShipment = () => {
           </h2>
         </Fade>
         <Fade left delay={400}>
-          <div
-            className="text-sm flex flex-col md:flex-row"
-            // data-aos="fade-right"
-            // data-aos-delay="400"
-          >
+          <div className="text-sm flex flex-col md:flex-row">
             <input
               type="text"
+              ref={trackInput}
               placeholder="Enter your Tracking Number"
               className="p-3 md:w-[30rem] focus:outline-none opacity-75 rounded-l-sm"
             />
-            <button className="bg-[#D40511] text-white p-3 w-full md:w-[10rem] rounded-r-sm transition-all duration-500 gradientbg">
+            <button
+              onClick={handleTrack}
+              className="bg-[#D40511] text-white p-3 w-full md:w-[10rem] rounded-r-sm transition-all duration-500 gradientbg"
+            >
               Track Shipment
             </button>
           </div>
