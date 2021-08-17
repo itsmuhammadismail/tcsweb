@@ -103,17 +103,17 @@ const Track = () => {
               </div>
               <div className="flex justify-between relative z-10">
                 <div className="flex flex-col items-center gap-2">
-                  <div className="bg-[#ec1c23be] w-[1rem] h-[1rem] rounded-full"></div>
+                  <div className="bg-[#db1a20] w-[1rem] h-[1rem] rounded-full"></div>
                   <p className="text-sm max-w-[7rem]">Booking</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="bg-[#ec1c23be] w-[1rem] h-[1rem] rounded-full"></div>
+                  <div className="bg-[#db1a20] w-[1rem] h-[1rem] rounded-full"></div>
                   <p className="text-sm max-w-[7rem] text-center">
                     Arrived at TCS Facility
                   </p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="bg-[#ec1c23be] w-[1rem] h-[1rem] rounded-full"></div>
+                  <div className="bg-[#db1a20] w-[1rem] h-[1rem] rounded-full"></div>
                   <p className="text-sm max-w-[7rem] text-center">
                     Departed from Origin
                   </p>
