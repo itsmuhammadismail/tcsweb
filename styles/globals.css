@@ -382,3 +382,10 @@ a:hover {
 .placeholder-close {
   display: none;
 }
+
+.MuiFormLabel-root.Mui-focused {
+  color: #d40511 !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #d40511 !important;
+}

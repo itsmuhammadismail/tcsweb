@@ -25,6 +25,13 @@ const TCSKardo = () => {
     setSelectedDate(date);
   };
 
+  const styles = (theme) => ({
+    notchedOutline: {
+      borderWidth: "1px",
+      borderColor: "red !important",
+    },
+  });
+
   const [productType, setProductType] = useState({
     "Courier Express": [
       "Overnight",
