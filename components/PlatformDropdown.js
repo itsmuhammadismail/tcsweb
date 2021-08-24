@@ -44,7 +44,7 @@ const PlatformDropdown = () => {
   ]);
 
   const [international, setInternational] = useState([
-    { name: "Express", img: "/Home/international/express.svg", link: "" },
+    { name: "Express", img: "/Home/domestic/express.svg", link: "" },
     {
       name: "Frieght",
       img: "/Home/international/freight.svg",
