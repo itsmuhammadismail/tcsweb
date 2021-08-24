@@ -1,6 +1,7 @@
 import { useRouter } from "next/dist/client/router";
 import { useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
+
 const TrackYourShipment = () => {
   const trackInput = useRef();
   const route = useRouter();

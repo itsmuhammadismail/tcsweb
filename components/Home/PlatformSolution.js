@@ -1,12 +1,10 @@
 import { useState } from "react";
 import PlatformSolutionBox from "./PlatformSolutionBox";
-// import { motion } from "framer-motion";
-// import Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 
+let listDelay = 200;
 const PlatformSolution = () => {
   const [selected, setSelected] = useState("Domestic");
-  const [duration, setDuration] = useState(0);
-  const [scale, setScale] = useState(1);
 
   const handleSelected = (newSelection) => {
     setSelected(newSelection);
@@ -140,51 +138,52 @@ const PlatformSolution = () => {
     },
   ]);
 
-  const [items, setItems] = useState(domestic);
+  const [items, setItems] = useState("Domestic");
 
   const handleItem = (item) => {
-    setDuration(0);
-    setScale(0.8);
-    if (item === "Domestic") setItems(domestic);
-    else if (item === "Supply Chain Solutions") setItems(supplyChain);
-    else if (item === "International") setItems(international);
-    else if (item === "Value Added Services") setItems(valueAddedServices);
-    else setItems([]);
-    setTimeout(() => {
-      setDuration(0.5);
-      setScale(1);
-    }, 100);
+    setItems(item);
   };
 
   return (
     <div className="lg:container mx-auto grid justify-items-center items-center my-[5rem] mt-[7rem] xl:h-[50vh] ">
-      <h1
-        className="font-bold text-4xl text-[#373737]"
-      >
-        Platform Solution
-      </h1>
-      <hr className="hr" />
+      <Fade left>
+        <h1 className="font-bold text-4xl text-[#373737]">Platform Solution</h1>
+      </Fade>
+      <Fade left delay={300}>
+        <hr className="hr" />
+      </Fade>
       <ul className="flex flex-col md:flex-row text-sm text-center gap-4 md:gap-12 mt-4">
         {list.map((item, index) => (
-          <li
-            key={index}
-            className={
-              selected === item
-                ? "font-semibold text-[#ED1C24] cursor-pointer"
-                : "cursor-pointer "
-            }
-            onClick={() => {
-              handleSelected(item);
-              handleItem(item);
-            }}
-          >
-            {item}
-          </li>
+          <Fade up key={index} delay={listDelay}>
+            <li
+              className={
+                selected === item
+                  ? "font-semibold text-[#ED1C24] cursor-pointer"
+                  : "cursor-pointer "
+              }
+              onClick={() => {
+                handleSelected(item);
+                handleItem(item);
+              }}
+            >
+              {item}
+            </li>
+            <div className="hidden">{(listDelay += 200)}</div>
+          </Fade>
         ))}
+        <div className="hidden">{(listDelay = 0)}</div>
       </ul>
       <div>
-      
-        <PlatformSolutionBox items={items} />
+        {items === "Domestic" && <PlatformSolutionBox items={domestic} />}
+        {items === "International" && (
+          <PlatformSolutionBox items={international} />
+        )}
+        {items === "Supply Chain Solutions" && (
+          <PlatformSolutionBox items={supplyChain} />
+        )}
+        {items === "Value Added Services" && (
+          <PlatformSolutionBox items={valueAddedServices} />
+        )}
       </div>
     </div>
   );

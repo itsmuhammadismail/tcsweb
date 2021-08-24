@@ -28,11 +28,9 @@ const CustomerSupport = () => {
             <h1 className="font-bold text-4xl max-w-[23rem] ">
               Customer Support
             </h1>
-          </Fade>
-          <Fade right>
+
             <hr className="hr" />
-          </Fade>
-          <Fade right delay={200}>
+
             <p className="my-8">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -40,11 +38,11 @@ const CustomerSupport = () => {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse.
             </p>
-          </Fade>
-          <Fade right delay={200}>
+
             <Link href="/customer-services">
-            <a>
-            <button className="moreBtn">More Details</button></a>
+              <a>
+                <button className="moreBtn">More Details</button>
+              </a>
             </Link>
           </Fade>
         </div>
