@@ -69,10 +69,26 @@ const Footer = () => {
         <div className="lg:container mx-auto flex justify-between items-center p-6 text-sm text-[#606060] flex-col md:flex-row">
           <div>2021 &copy; TCS EXPRESS. All rights reserved</div>
           <ul className="flex gap-3 md:gap-6  text-xs md:text-sm link">
-            <li>Terms of Use</li>
-            <li>Fraud Prevention</li>
-            <li>Privacy Policy</li>
-            <li>FAQs</li>
+            <Link href="/terms-of-use">
+              <a>
+                <li>Terms of Use</li>
+              </a>
+            </Link>
+            <Link href="/fraud-prevention">
+              <a>
+                <li>Fraud Prevention</li>
+              </a>
+            </Link>
+            <Link href="/privacy-policy">
+              <a>
+                <li>Privacy Policy</li>
+              </a>
+            </Link>
+            <Link href="/faqs">
+              <a>
+                <li>FAQs</li>
+              </a>
+            </Link>
           </ul>
         </div>
       </div>

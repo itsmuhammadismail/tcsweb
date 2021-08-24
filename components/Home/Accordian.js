@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+    textAlign: "left",
   },
 }));
 
@@ -30,7 +31,7 @@ export default function SimpleAccordion({ heading, text }) {
           <Typography className={classes.heading}>{heading}</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{text}</Typography>
+          <Typography className="text-left">{text}</Typography>
         </AccordionDetails>
       </Accordion>
     </div>
