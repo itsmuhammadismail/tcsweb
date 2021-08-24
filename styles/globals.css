@@ -108,8 +108,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: Helvetica, Sans-Serif;
+}
+
+body {
   overflow-x: hidden;
 }
+
+/* .layout {
+  overflow-x: hidden;
+} */
 
 select {
   font-size: 14px !important;
