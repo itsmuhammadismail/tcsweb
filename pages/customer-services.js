@@ -115,7 +115,7 @@ const CustomerServices = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center my-[3rem] bg-[#FAFBFC] py-[4rem]">
+        <div className="flex flex-col justify-center items-center mt-[6rem] bg-[#FAFBFC] py-[6rem]">
           <h1 className="font-bold text-4xl mb-[3rem]">
             Frequently Asked Questions
           </h1>

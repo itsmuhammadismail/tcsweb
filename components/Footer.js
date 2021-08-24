@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="border-t">
@@ -5,12 +7,32 @@ const Footer = () => {
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
             <li className="font-bold mb-4 text-lg">Company Information</li>
-            <li>About TCS</li>
-            <li>Mission & Core Values</li>
+            <Link href="/about">
+              <a>
+                <li>About TCS</li>
+              </a>
+            </Link>
+            <Link href="/mission">
+              <a>
+                <li>Mission & Core Values</li>
+              </a>
+            </Link>
             <li>Leadership</li>
-            <li>Day in the life of TCS</li>
-            <li>Careers</li>
-            <li>CSR / TCS Foundation</li>
+            <Link href="/day-in-the-life-of-tcs">
+              <a>
+                <li>Day in the life of TCS</li>
+              </a>
+            </Link>
+            <Link href="/careers">
+              <a>
+                <li>Careers</li>
+              </a>
+            </Link>
+            <Link href="/csr-tcs-foundation">
+              <a>
+                <li>CSR / TCS Foundation</li>
+              </a>
+            </Link>
           </ul>
         </div>
         <div className="flex-1 flex ">

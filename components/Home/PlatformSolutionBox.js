@@ -24,7 +24,11 @@ const PlatformSolutionBox = ({ items }) => {
                   <img
                     src={item.img}
                     alt=""
-                    className="h-[3rem] max-w-[4rem] object-contain"
+                    className={`h-[3rem] object-contain ${
+                      item.name === "Overland Express"
+                        ? "max-w-[5rem]"
+                        : "max-w-[4rem]"
+                    }`}
                   />
                   <p className="text-sm w-[9rem] mt-1 ">{item.name}</p>
                 </div>
