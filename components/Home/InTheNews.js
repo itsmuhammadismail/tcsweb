@@ -1,5 +1,7 @@
 import { useState } from "react";
+import Fade from "react-reveal/Fade";
 
+let delay = 500;
 const InTheNews = () => {
   const [news, setNews] = useState([
     {
@@ -25,16 +27,26 @@ const InTheNews = () => {
   return (
     <div className="">
       <div className="max-w-[70rem] mx-auto flex justify-between  flex-col items-center py-[7rem] text-[#373737]">
-        <h1 className="font-bold text-4xl max-w-[23rem] ">In The News</h1>
-        <hr className="hr" />
+        <Fade left>
+          <h1 className="font-bold text-4xl max-w-[23rem] ">In The News</h1>
+        </Fade>
+        <Fade left delay={300}>
+          <hr className="hr" />
+        </Fade>
         <div className="flex flex-wrap gap-4 justify-center mt-[2rem]">
           {news.map((n) => (
-            <div key={n.id} className="flex-1 w-full cursor-pointer">
-              <img src={n.img} alt="" />
-              <h2 className="font-bold text-xl w-[15rem] my-2">{n.heading}</h2>
-              <p className="text-xs">{n.date}</p>
-            </div>
+            <Fade up key={n.id} delay={delay}>
+              <div className="flex-1 w-full cursor-pointer">
+                <img src={n.img} alt="" />
+                <h2 className="font-bold text-xl w-[15rem] my-2">
+                  {n.heading}
+                </h2>
+                <p className="text-xs">{n.date}</p>
+              </div>
+              <div className="hidden">{(delay += 200)}</div>
+            </Fade>
           ))}
+          <div className="hidden">{(delay = 0)}</div>
         </div>
       </div>
     </div>
