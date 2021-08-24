@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="border-t">
-      <div className="lg:container mx-auto flex p-[7rem] gap-6">
+      <div className="lg:container mx-auto flex py-[7rem] px-6 gap-6">
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
             <li className="font-bold mb-4 text-lg">Company Information</li>
