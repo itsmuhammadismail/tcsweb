@@ -50,7 +50,7 @@ const Rates = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center w-[18rem] border rounded-sm">
-              <img src="/codportal.png" alt="" />
+              <img src="/codportal2.png" alt="" />
               <div className="flex flex-col justify-center items-center text-center p-4">
                 <h2 className="font-bold text-xl pb-4">COD Portal</h2>
                 <p className="text-sm border-t py-4">
