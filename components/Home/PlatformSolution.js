@@ -145,7 +145,7 @@ const PlatformSolution = () => {
   };
 
   return (
-    <div className="lg:container mx-auto grid justify-items-center  my-[5rem] mt-[7rem] xl:h-[50vh] ">
+    <div className="lg:container mx-auto grid justify-items-center content-start my-[5rem] mt-[7rem] xl:h-[50vh] ">
       <Fade left>
         <h1 className="font-bold text-4xl text-[#373737]">Platform Solution</h1>
       </Fade>
