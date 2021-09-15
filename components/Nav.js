@@ -22,7 +22,7 @@ const Nav = () => {
 
         <li className="cursor-pointer nav ">
           <div className="flex justify-center items-center">
-            Platform Services
+            Platform Solutions
             <KeyboardArrowDownIcon />
           </div>
           {/* <Dropdown

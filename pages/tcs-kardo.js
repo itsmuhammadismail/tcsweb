@@ -99,12 +99,16 @@ const TCSKardo = () => {
               >
                 New Customer
               </button>
+              <Link href="/login">
+                <a>
               <button
                 onClick={() => setCustomer("existing")}
                 className="shadow-my-lg text-sm w-[22rem] h-[3rem] hover:bg-[#F21E26] hover:text-white rounded-md transition-all duration-500"
               >
                 Existing Customer
               </button>
+              </a>
+              </Link>
             </div>
           </div>
           {customer == "new" && (
