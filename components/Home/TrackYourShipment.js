@@ -6,7 +6,8 @@ const TrackYourShipment = () => {
   const trackInput = useRef();
   const route = useRouter();
   const [trackState, setTrackState] = useState("");
-  const handleTrack = () => {
+  const handleTrack = (e) => {
+    e.preventDefault();
     if (trackInput.current.value !== "") {
       setTrackState(trackInput.current.value);
       route.push("/track/" + trackInput.current.value);
@@ -26,7 +27,7 @@ const TrackYourShipment = () => {
           </h2>
         </Fade>
         <Fade left delay={400}>
-          <div className="text-sm flex flex-col md:flex-row">
+          <form className="text-sm flex flex-col md:flex-row">
             <input
               type="text"
               ref={trackInput}
@@ -35,11 +36,12 @@ const TrackYourShipment = () => {
             />
             <button
               onClick={handleTrack}
+              type="submit"
               className="bg-[#D40511] text-white p-3 w-full md:w-[10rem] rounded-r-sm transition-all duration-500 gradientbg"
             >
               Track Shipment
             </button>
-          </div>
+          </form>
         </Fade>
       </div>
     </div>

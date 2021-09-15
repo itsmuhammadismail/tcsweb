@@ -1,4 +1,5 @@
 const Map = () => {
+  // const 
   return (
     <div className=" mx-auto flex justify-center items-center mt-12 shadow-my w-[62rem]">
       <div className=" w-[20rem]">
