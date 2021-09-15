@@ -1,5 +1,9 @@
+import { useState } from "react";
+import MapPopup from "./MapPopup";
+
+
 const Map = () => {
-  // const 
+  const [mapHover, setMapHover] = useState(false);
   return (
     <div className=" mx-auto flex justify-center items-center mt-12 shadow-my w-[62rem]">
       <div className=" w-[20rem]">
@@ -24,7 +28,10 @@ const Map = () => {
           Search Result
         </h2>
 
-        <div className="border-t px-4 py-4 flex flex-col gap-1">
+        <div
+          className="border-t px-4 py-4 flex flex-col gap-1 cursor-pointer"
+          onClick={() => setMapHover(true)}
+        >
           <h2 className="font-semibold text-sm">
             Johar Chorangi Express Center
           </h2>
@@ -33,7 +40,10 @@ const Map = () => {
             Address: Shop no. W5 Eastern Pride Block 15 Gulistan-e-Johar
           </p>
         </div>
-        <div className="border-t px-4 py-4 flex flex-col gap-1">
+        <div
+          className="border-t px-4 py-4 flex flex-col gap-1 cursor-pointer"
+          onClick={() => setMapHover(true)}
+        >
           <h2 className="font-semibold text-sm">
             Johar Chorangi Express Center
           </h2>
@@ -42,7 +52,10 @@ const Map = () => {
             Address: Shop no. W5 Eastern Pride Block 15 Gulistan-e-Johar
           </p>
         </div>
-        <div className="border-t px-4 py-4 flex flex-col gap-1">
+        <div
+          className="border-t px-4 py-4 flex flex-col gap-1 cursor-pointer"
+          onClick={() => setMapHover(true)}
+        >
           <h2 className="font-semibold text-sm">
             Johar Chorangi Express Center
           </h2>
@@ -51,6 +64,7 @@ const Map = () => {
             Address: Shop no. W5 Eastern Pride Block 15 Gulistan-e-Johar
           </p>
         </div>
+       
         {/* <div className="border-t px-4 py-6 flex flex-col gap-1">
           <h2 className="font-semibold text-sm">
             Johar Chorangi Express Center
@@ -61,8 +75,14 @@ const Map = () => {
           </p>
         </div> */}
       </div>
-      <div>
+      <div className="relative">
         <img src="/map.png" alt="" className="h-[34rem]" />
+        {mapHover && (
+          <>
+            <div className="absolute top-0 w-full h-full bg-black opacity-30"></div>
+            <MapPopup onClose={() => setMapHover(false)} />
+          </>
+        )}
       </div>
     </div>
   );
