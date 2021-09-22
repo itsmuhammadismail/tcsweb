@@ -45,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex-1">
-          <h2 className="font-bold mb-4 text-2xl">Sign up for updates</h2>
+          <h2 className="font-bold mb-4 text-lg">Sign up for updates</h2>
           <div className="flex  items-center">
             <input
               type="text"
