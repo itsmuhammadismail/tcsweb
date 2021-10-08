@@ -19,7 +19,7 @@ const Header = () => {
   };
   return (
     <header className="bg-[#F21E26] pt-4 pb-4">
-      <div className="lg:container mx-auto flex justify-between items-center px-6">
+      <div className="max-w-[70rem] mx-auto flex justify-between items-center px-6">
         <Link href="/">
           <a>
             <img src="/TCS.svg" alt="" className="w-[9rem]" />

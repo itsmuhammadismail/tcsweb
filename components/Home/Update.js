@@ -9,7 +9,7 @@ const Update = () => {
 
   return (
     <div className="text-xs p-2 opacity-animate" style={{ display: display }}>
-      <div className="lg:container mx-auto flex justify-between items-center md:px-6 flex-col md:flex-row text-center">
+      <div className="max-w-[70rem] mx-auto flex justify-between items-center md:px-6 flex-col md:flex-row text-center">
         <div>
           <WarningIcon fontSize="small" /> 7.18.2021 | Find out more about TCS's
           Covid 19 Response
