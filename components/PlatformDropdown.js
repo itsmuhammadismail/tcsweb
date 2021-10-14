@@ -148,8 +148,8 @@ const PlatformDropdown = () => {
 
   return (
     <>
-      <div className="absolute dropdown w-[100vw] left-0 ">
-        <div className="relative max-w-[70rem] mx-auto">
+      <div className="absolute dropdown w-[100vw] left-0 mt-[-1rem] pt-[1rem]">
+        <div className="relative w-full h-[4rem] max-w-[70rem] mx-auto ">
           <div
             className="absolute w-6 h-6 bg-white top-[0.4rem] right-[23.5rem]"
             style={{ clipPath: "polygon(50% 0%, 0 68%, 100% 68%)" }}
@@ -157,7 +157,7 @@ const PlatformDropdown = () => {
         </div>
 
         <div className="w-[17rem] h-12 absolute"></div>
-        <div className=" pb-3 px-3 shadow-md graywhitegradient text-[#373737] text-xs w-full rounded-b-sm mt-1 absolute z-10 top-[0.9rem] xl:top-[0.8rem] left-[0px] flex flex-col  items-center h-[21rem]">
+        <div className="pb-3 px-3 shadow-md graywhitegradient text-[#373737] text-xs w-full rounded-b-sm mt-[1.3rem] absolute z-10 top-[0.9rem] xl:top-[0.8rem] left-[0px] flex flex-col  items-center h-[21rem] height-animation">
           <ul className="flex flex-col md:flex-row text-sm text-center gap-4 md:gap-12 mt-4 pt-4">
             {list.map((item, index) => (
               <Fade up key={index} delay={listDelay}>

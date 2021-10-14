@@ -27,19 +27,19 @@ const TCSNearYou = () => {
 
           <div className="mt-4 flex flex-wrap justify-center items-center gap-4 max-w-[70rem]">
             <div className="relative flex justify-center items-center max-w-[20rem]">
-              <img src="/cities/Karachi.png" alt="" />
+              <img src="/cities/Karachi.jpg" alt="" />
               <p className="absolute bottom-4 text-white font-semibold text-xl">
                 Karachi
               </p>
             </div>
             <div className="relative flex justify-center items-center max-w-[20rem]">
-              <img src="/cities/Lahore.png" alt="" />
+              <img src="/cities/Lahore.jpg" alt="" />
               <p className="absolute bottom-4 text-white font-semibold text-xl">
                 Lahore
               </p>
             </div>
             <div className="relative flex justify-center items-center max-w-[20rem]">
-              <img src="/cities/Islamabad.png" alt="" />
+              <img src="/cities/Islamabad.jpg" alt="" />
               <p className="absolute bottom-4 text-white font-semibold text-xl">
                 Islamabad
               </p>
@@ -51,7 +51,7 @@ const TCSNearYou = () => {
               </p>
             </div>
             <div className="relative flex justify-center items-center max-w-[20rem]">
-              <img src="/cities/Rawalpindi.png" alt="" />
+              <img src="/cities/Rawalpindi.jpg" alt="" />
               <p className="absolute bottom-4 text-white font-semibold text-xl">
                 Rawalpindi
               </p>

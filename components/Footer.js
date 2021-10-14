@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="border-t">
-      <div className="lg:container mx-auto flex py-[7rem] px-6 gap-6">
+      <div className="max-w-[70rem] mx-auto flex py-[7rem] px-6 gap-6">
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
             <li className="font-bold mb-4 text-lg">Company Information</li>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-[#f1f1f1]">
-        <div className="lg:container mx-auto flex justify-between items-center p-6 text-sm text-[#606060] flex-col md:flex-row">
+        <div className="max-w-[70rem] mx-auto flex justify-between items-center p-6 text-sm text-[#606060] flex-col md:flex-row">
           <div>2021 &copy; TCS EXPRESS. All rights reserved</div>
           <ul className="flex gap-3 md:gap-6  text-xs md:text-sm link">
             <Link href="/terms-of-use">

@@ -27,7 +27,7 @@ const Track = ({}) => {
         <link rel="icon" href="/favicon-16x16.png" />
       </Head>
       <Layout>
-        <img src="/image.png" alt="" className="w-full" />
+        <img src="/image.jpg" alt="" className="w-full" />
         <form className="my-8 mb-16">
           <div className="text-center">
             <h2 className="text-3xl font-semibold">Track Your Shipment</h2>

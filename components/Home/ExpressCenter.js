@@ -12,11 +12,14 @@ const ExpressCenter = () => {
         <hr className="hr" />
       </Fade>
       <Fade left delay={600}>
-        <p className="text-sm text-center max-w-[40rem] mt-[1.5rem] mb-[3rem]">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen
+        <p className="text-sm text-center max-w-[55rem] mt-[1.5rem] mb-[3rem]">
+          TCS boasts of the largest network of Express Centers in the country,
+          with over 970 locations spread to all corners. An unparalleled
+          domestic grid of infrastructure and penetration in even the remotest
+          locations has made us the undisputed logistics backbone of Pakistan.
+          This in turn, allows us to provide all our customers with the highest
+          possible quality and efficiency of services that they deserve, across
+          the board.
         </p>
       </Fade>
       <div className="relative">

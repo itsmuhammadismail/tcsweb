@@ -218,13 +218,13 @@ a:hover {
 }
 
 .nav .dropdown {
-  /* display: none; */
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   z-index: 1000;
   opacity: 0;
-  transition-property: opacity, visibility;
+  /* transition-property: opacity, visibility;
   transition-duration: 0.4s, 0s;
-  transition-delay: 0s, 0.4s;
+  transition-delay: 0s, 0.4s; */
 }
 
 .nav + .backdropdown {
@@ -240,10 +240,10 @@ a:hover {
 }
 
 .nav:hover .dropdown {
-  /* display: block; */
-  visibility: visible;
+  display: block;
+  /* visibility: visible; */
   opacity: 1;
-  transition-delay: 0s, 0s;
+  /* transition-delay: 0s, 0s; */
 }
 
 .social:hover {
@@ -388,4 +388,17 @@ a:hover {
 }
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: #d40511 !important;
+}
+
+@keyframes height {
+  from {
+    height: 10rem;
+  }
+  to {
+    height: 21rem;
+  }
+}
+
+.height-animation {
+  animation: height 0.5s ease;
 }

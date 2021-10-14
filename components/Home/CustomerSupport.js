@@ -32,11 +32,7 @@ const CustomerSupport = () => {
             <hr className="hr" />
 
             <p className="my-8">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse.
+            As an organization that interacts with its esteemed customers directly and on a regular basis, TCS strives daily to better it’s services and to better understand your needs. Our extensive Call Centre network, highly motivated Social Media Teams and Whatsapp response systems have all been created to listen to your queries, inputs, and complaints so we can serve you better.
             </p>
 
             <Link href="/customer-services">

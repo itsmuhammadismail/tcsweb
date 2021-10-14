@@ -27,7 +27,7 @@ export default function NewsSlider() {
         <SwiperSlide className="cursor-pointer">
           <div
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
-            style={{ backgroundImage: "url('/Home/working1.png')" }}
+            style={{ backgroundImage: "url('/Home/Working-with-TCS-2.jpg')" }}
           >
             <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Community Learning
@@ -38,7 +38,7 @@ export default function NewsSlider() {
         <SwiperSlide className="cursor-pointer">
           <div
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
-            style={{ backgroundImage: "url('/Home/working2.png')" }}
+            style={{ backgroundImage: "url('/Home/Working-with-TCS-1.jpg')" }}
           >
             <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Health Insurance
@@ -49,7 +49,7 @@ export default function NewsSlider() {
         <SwiperSlide className="cursor-pointer">
           <div
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
-            style={{ backgroundImage: "url('/Home/working3.png')" }}
+            style={{ backgroundImage: "url('/Home/Working-with-TCS-3.jpg')" }}
           >
             <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
               Your Work, Your Time
@@ -57,17 +57,7 @@ export default function NewsSlider() {
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="cursor-pointer">
-          <div
-            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
-            style={{ backgroundImage: "url('/Home/working1.png')" }}
-          >
-            <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
-              Community Learning
-            </h1>
-            <p>Industry-wide meetups, events and conferences.</p>
-          </div>
-        </SwiperSlide>
+        
       </Swiper>
     </>
   );
