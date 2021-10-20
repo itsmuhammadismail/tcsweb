@@ -14,11 +14,10 @@ const CustomerServices = () => {
         <link rel="icon" href="/favicon-16x16.png" />
       </Head>
       <Layout>
-        <div className="bg-[#efefef] flex flex-col justify-center items-center h-[180px]">
+        <div className="bg-[#efefef] flex flex-col justify-center items-center min-h-[180px] py-[2rem]">
           <h1 className="text-[40px] font-bold">Customer Services</h1>
-          <p className="text-[1.05rem] mt-[-5px] max-w-[35rem] text-center">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
-            excepturi minima et inventore necessitatibus veritatis.
+          <p className="text-[1.05rem] mt-[-5px] max-w-[45rem] text-center">
+          As an organization that interacts with its esteemed customers directly and on a regular basis, TCS strives daily to better it’s services and to better understand your needs. Our extensive Call Centre network, highly motivated Social Media Teams and Whatsapp response systems have all been created to listen to your queries, inputs, and complaints so we can serve you better.
           </p>
         </div>
         <div className="my-[3rem] flex gap-4 items-center justify-center text-center">

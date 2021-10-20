@@ -16,29 +16,13 @@ const DayInTheLifeOfTCS = () => {
         </div>
         <div className="flex flex-col justify-center items-center gap-8 max-w-[50rem] mx-auto text-center p-[3rem]">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi quisquam similique
-            minus impedit, eum non pariatur, incidunt earum quos laborum
-            aspernatur minima illum. Deleniti delectus iure esse.
+          At TCS, we don’t operate like your regulation workplace. This is a haven for likeminded individuals that are driven by their passion for the pursuit of excellence, both individual and collective. As one of the largest organizations in the country, our offices span the length and breadth of Pakistan but every single office, express center or warehouse has the same ethos; brilliance through innovation.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi
+          The TCS Family provides and open, free space for you to explore new possibilities and create ideas from scratch, without limitations or fear of failure. It gives you freedom to express yourself creatively and to be part of teams that are fast paced, driven and always thinking outside the box. Truth be told, there is no one distinct day in the life of a TCS employee.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi quisquam similique
-            minus impedit, eum non pariatur, incidunt earum quos laborum
-            aspernatur minima illum. Deleniti delectus iure esse. Vel reiciendis
-            quasi quisquam similique minus impedit, eum non pariatur, incidunt
-            earum quos laborum aspernatur minima illum. Deleniti delectus iure
-            esse.
+          Every day is a new experience!
           </p>
         </div>
       </Layout>

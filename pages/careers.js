@@ -15,30 +15,16 @@ const Career = () => {
           <h1 className="text-[40px] font-bold">Careers</h1>
         </div>
         <div className="flex flex-col justify-center items-center gap-8 max-w-[50rem] mx-auto text-center p-[3rem]">
+          <h2 className="font-bold text-[1.5rem]">Why TCS</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi quisquam similique
-            minus impedit, eum non pariatur, incidunt earum quos laborum
-            aspernatur minima illum. Deleniti delectus iure esse.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi quisquam similique
-            minus impedit, eum non pariatur, incidunt earum quos laborum
-            aspernatur minima illum. Deleniti delectus iure esse. Vel reiciendis
-            quasi quisquam similique minus impedit, eum non pariatur, incidunt
-            earum quos laborum aspernatur minima illum. Deleniti delectus iure
-            esse.
+            The TCS Family provides and open, free space for you to explore new
+            possibilities and create ideas from scratch, without limitations or
+            fear of failure. It gives you freedom to express yourself creatively
+            and to be part of teams that are fast paced, driven and always
+            thinking outside the box. So, if you’re looking for an environment
+            that allows you to grow personally and professionally without the
+            shackles of convention, pop over and see if you’re the right fit for
+            us!
           </p>
         </div>
       </Layout>

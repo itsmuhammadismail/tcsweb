@@ -16,29 +16,17 @@ const CSRTCSFoundation = () => {
         </div>
         <div className="flex flex-col justify-center items-center gap-8 max-w-[50rem] mx-auto text-center p-[3rem]">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi quisquam similique
-            minus impedit, eum non pariatur, incidunt earum quos laborum
-            aspernatur minima illum. Deleniti delectus iure esse.
+            As one of the largest organizations in the country, TCS is aware of
+            the responsibility that rests on its shoulders when it comes to
+            giving back to society. In fact, helping the less fortunate is one
+            of the founding pillars of this organization. Over the years, we
+            have worked on building systems and programs that allow us to do
+            good in society and provide some assistance to the less fortunate.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            unde maxime reprehenderit, provident, aut sint fuga nisi aliquam
-            nesciunt, facere repellat natus officiis mollitia laboriosam amet
-            perspiciatis iste alias! Vel reiciendis quasi quisquam similique
-            minus impedit, eum non pariatur, incidunt earum quos laborum
-            aspernatur minima illum. Deleniti delectus iure esse. Vel reiciendis
-            quasi quisquam similique minus impedit, eum non pariatur, incidunt
-            earum quos laborum aspernatur minima illum. Deleniti delectus iure
-            esse.
+            This tab will include buttons where we can mention our initiatives
+            and partnerships. HR consultation on existing projects that can be
+            uploaded.
           </p>
         </div>
       </Layout>

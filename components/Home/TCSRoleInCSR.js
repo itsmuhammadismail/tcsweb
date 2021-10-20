@@ -7,7 +7,7 @@ const TCSRoleInCSR = () => {
       <div className="max-w-[70rem] mx-auto flex flex-col justify-center  py-[7rem] text-[#373737]">
         <div className="flex justify-center gap-[8rem] min-h-[28.55rem]">
           <div className="max-w-[19rem] mt-[2.5rem]">
-            <div className="mb-[4rem]">
+            <div className="mb-[2rem]">
               <Fade left>
                 <h1 className="font-bold text-4xl max-w-[23rem] mr-[-5rem]">
                   TCS's role in CSR activities in Pakistan
@@ -18,12 +18,15 @@ const TCSRoleInCSR = () => {
               </Fade>
             </div>
             <Fade left delay={500}>
-              <h2 className="font-bold text-2xl">Heading Goes Here</h2>
+              
               <p className="my-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse ultrices gravida. Risus commodo viverra
-                maecenas accumsan lacus vel facilisis.
+                As one of the largest organizations in the country, TCS is aware
+                of the responsibility that rests on its shoulders when it comes
+                to giving back to society. In fact, helping the less fortunate
+                is one of the founding pillars of this organization. Over the
+                years, we have worked on building systems and programs that
+                allow us to do good in society and provide some assistance to
+                the less fortunate
               </p>
               <button className="moreBtn">More Details</button>
             </Fade>
