@@ -14,16 +14,23 @@ import {
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 import { useRouter } from "next/dist/client/router";
+import getOrigins from "../apis/getOrigins";
 
 const RateCalculator = () => {
   const [customer, setCustomer] = useState("");
   const [shipping, setShipping] = useState("");
+  const [origins, setOrigins] = useState(null);
 
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
+  useEffect(async () => {
+    const resultOrigin = await getOrigins();
+    if (resultOrigin["IsSuccess"] === true) setOrigins(resultOrigin["Data"]);
+  }, []);
 
   const [productType, setProductType] = useState({
     "Courier Express": [
@@ -113,8 +120,15 @@ const RateCalculator = () => {
                         InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
                         onChange={handleProduct}
                       >
-                        <MenuItem value="Abbotabad">Abbotabad</MenuItem>
-                        <MenuItem value="Karachi">Karachi</MenuItem>
+                        {origins &&
+                          origins.map((origin) => (
+                            <MenuItem
+                              key={origin.Value}
+                              value={origin.Description}
+                            >
+                              {origin.Description}
+                            </MenuItem>
+                          ))}
                       </Select>
                     </FormControl>
                   </div>
