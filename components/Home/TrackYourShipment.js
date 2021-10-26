@@ -29,7 +29,7 @@ const TrackYourShipment = () => {
         <Fade left delay={400}>
           <form className="text-sm flex flex-col md:flex-row">
             <input
-              type="text"
+              type="number"
               ref={trackInput}
               placeholder="Enter your Tracking Number"
               className="p-3 md:w-[30rem] focus:outline-none opacity-75 rounded-l-sm"

@@ -38,6 +38,8 @@ const Map = ({ city }) => {
         left: 0,
         behavior: "smooth",
       });
+      searchRef.current.value = city;
+      
     }
   }, [city]);
 
@@ -77,7 +79,12 @@ const Map = ({ city }) => {
   return (
     <div className=" mx-auto flex justify-center items-center mt-12 shadow-my w-[62rem]">
       <div className=" w-[20rem]">
-        <div className="bg-[#f7f7f7] p-4 m-3 rounded-sm relative">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+          className="bg-[#f7f7f7] p-4 m-3 rounded-sm relative"
+        >
           <h2 className="font-semibold text-xl pb-3">Search</h2>
           <div className="">
             <input
@@ -114,14 +121,15 @@ const Map = ({ city }) => {
             <div className="bg-[#dadada] rounded-full w-10 h-10 p-2 flex justify-center items-center">
               <img src="/location.svg" alt="" />
             </div>
-            <div
+            <button
+              type="submit"
               className="bg-[#f21e26] rounded-full w-10 h-10 p-3 flex justify-center items-center"
               onClick={() => getBranches(searchRef.current.value)}
             >
               <img src="/search.svg" alt="" />
-            </div>
+            </button>
           </div>
-        </div>
+        </form>
 
         <h2 className="text-[#f21e26] font-semibold text-lg p-4">
           Search Result

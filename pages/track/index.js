@@ -5,6 +5,7 @@ import MaterialTable from "../../components/Home/MaterialTable";
 import Layout from "../../components/Layout";
 import tracking from "../../apis/tracking";
 import ReactLoading from "react-loading";
+import SimpleAccordion from "../../components/Home/Accordian";
 
 const Track = ({}) => {
   const router = useRouter();
@@ -66,10 +67,15 @@ const Track = ({}) => {
         </form>
         {isLoading && (
           <div className="h-[15rem] flex justify-center items-center">
-            <ReactLoading type={"spin"} color={"#F21E26"} height={'5rem'} width={'5rem'} />
+            <ReactLoading
+              type={"spin"}
+              color={"#F21E26"}
+              height={"5rem"}
+              width={"5rem"}
+            />
           </div>
         )}
-        {isLoading===false && trackRecord && trackRecord[0] !== null && (
+        {isLoading === false && trackRecord && trackRecord[0] !== null && (
           <div className="flex justify-center items-center mb-[8rem]">
             <div className="w-[70rem]  shadow-card p-8">
               <div className="flex gap-4">
@@ -129,155 +135,161 @@ const Track = ({}) => {
                   <p className="">
                     Current Status:{" "}
                     <span className="text-lg text-[#f0575d] font-bold">
-                      {trackRecord[0]["DeliveryInfo"][0]["status"]}
+                      {trackRecord[0]["DeliveryInfo"] &&
+                        trackRecord[0]["DeliveryInfo"][0]["status"]}
                     </span>
                   </p>
-                  {trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                    "DELIVERED" && (
-                    <>
-                      <div className="flex">
-                        <p className="w-[6rem]">Delivered on:</p>
-                        <p className="font-bold">
-                          {trackRecord[0]["DeliveryInfo"][0]["dateTime"]}
-                        </p>
-                      </div>
-                      <div className="flex">
-                        <p className="w-[6rem]">Signed by:</p>
-                        <p className="font-bold">
-                          {trackRecord[0]["DeliveryInfo"][0]["recievedBy"]}
-                        </p>
-                      </div>
-                    </>
-                  )}
+                  {trackRecord[0]["DeliveryInfo"] &&
+                    trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                      "DELIVERED" && (
+                      <>
+                        <div className="flex">
+                          <p className="w-[6rem]">Delivered on:</p>
+                          <p className="font-bold">
+                            {trackRecord[0]["DeliveryInfo"][0]["dateTime"]}
+                          </p>
+                        </div>
+                        <div className="flex">
+                          <p className="w-[6rem]">Signed by:</p>
+                          <p className="font-bold">
+                            {trackRecord[0]["DeliveryInfo"][0]["recievedBy"]}
+                          </p>
+                        </div>
+                      </>
+                    )}
                 </div>
               </div>
               <h2 className="text-3xl font-semibold text-center my-[3rem]">
                 Track History:
               </h2>
               <div className="flex-1">
-                <div className="flex relative top-[0.6rem] pl-[1.1rem] pr-[2rem] gap-2">
-                  <hr
-                    className={`border-t-4 border-dotted flex-1  ${
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DELIVERED" ||
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "OUT FOR DELIVERY" ||
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DEPARTED FROM ORIGIN" ||
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "ARRIVED AT TCS FACILITY"
-                        ? "border-[#ec1c23be]"
-                        : "border-[#d8d8d8]"
-                    }`}
-                  />
-                  <hr
-                    className={`border-t-4 border-dotted flex-1  ${
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DELIVERED" ||
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "OUT FOR DELIVERY" ||
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DEPARTED FROM ORIGIN"
-                        ? "border-[#ec1c23be]"
-                        : "border-[#d8d8d8]"
-                    }`}
-                  />
-                  <hr
-                    className={`border-t-4 border-dotted flex-1  ${
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DELIVERED" ||
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "OUT FOR DELIVERY"
-                        ? "border-[#ec1c23be]"
-                        : "border-[#d8d8d8]"
-                    }`}
-                  />
-                  <hr
-                    className={`border-t-4 border-dotted flex-1  ${
-                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                      "DELIVERED"
-                        ? "border-[#ec1c23be]"
-                        : "border-[#d8d8d8]"
-                    }`}
-                  />
-                </div>
-                <div className="flex justify-between relative z-10">
-                  <div className="flex flex-col items-center gap-2">
-                    <div
-                      className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "DELIVERED" ||
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "OUT FOR DELIVERY" ||
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "DEPARTED FROM ORIGIN" ||
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "ARRIVED AT TCS FACILITY"
-                          ? "bg-[#db1a20]"
-                          : "bg-[#d8d8d8]"
-                      }`}
-                    ></div>
-                    <p className="text-sm max-w-[7rem]">Booking</p>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div
-                      className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "DELIVERED" ||
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "OUT FOR DELIVERY" ||
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "DEPARTED FROM ORIGIN"
-                          ? "bg-[#db1a20]"
-                          : "bg-[#d8d8d8]"
-                      }`}
-                    ></div>
-                    <p className="text-sm max-w-[7rem] text-center">
-                      Arrived at TCS Facility
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div
-                      className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "DELIVERED" ||
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                          "OUT FOR DELIVERY"
-                          ? "bg-[#db1a20]"
-                          : "bg-[#d8d8d8]"
-                      }`}
-                    ></div>
-                    <p className="text-sm max-w-[7rem] text-center">
-                      Departed from Origin
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div
-                      className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DELIVERED"
-                          ? "bg-[#db1a20]"
-                          : "bg-[#d8d8d8]"
-                      }`}
-                    ></div>
-                    <p className="text-sm max-w-[6.7rem] text-center">
-                      Out for Delivery
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div
-                      className={`w-[1rem] h-[1rem] rounded-full ${
-                        trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                        "DELIVERED"
-                          ? "bg-[#db1a20]"
-                          : "bg-[#d8d8d8]"
-                      }`}
-                    ></div>
-                    <p className="text-sm max-w-[7rem] text-center">
-                      Delivered
-                    </p>
-                  </div>
-                </div>
+                {trackRecord[0]["DeliveryInfo"] && (
+                  <>
+                    <div className="flex relative top-[0.6rem] pl-[1.1rem] pr-[2rem] gap-2">
+                      <hr
+                        className={`border-t-4 border-dotted flex-1  ${
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DELIVERED" ||
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "OUT FOR DELIVERY" ||
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DEPARTED FROM ORIGIN" ||
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "ARRIVED AT TCS FACILITY"
+                            ? "border-[#ec1c23be]"
+                            : "border-[#d8d8d8]"
+                        }`}
+                      />
+                      <hr
+                        className={`border-t-4 border-dotted flex-1  ${
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DELIVERED" ||
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "OUT FOR DELIVERY" ||
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DEPARTED FROM ORIGIN"
+                            ? "border-[#ec1c23be]"
+                            : "border-[#d8d8d8]"
+                        }`}
+                      />
+                      <hr
+                        className={`border-t-4 border-dotted flex-1  ${
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DELIVERED" ||
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "OUT FOR DELIVERY"
+                            ? "border-[#ec1c23be]"
+                            : "border-[#d8d8d8]"
+                        }`}
+                      />
+                      <hr
+                        className={`border-t-4 border-dotted flex-1  ${
+                          trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                          "DELIVERED"
+                            ? "border-[#ec1c23be]"
+                            : "border-[#d8d8d8]"
+                        }`}
+                      />
+                    </div>
+                    <div className="flex justify-between relative z-10">
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "DELIVERED" ||
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "OUT FOR DELIVERY" ||
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "DEPARTED FROM ORIGIN" ||
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "ARRIVED AT TCS FACILITY"
+                              ? "bg-[#db1a20]"
+                              : "bg-[#d8d8d8]"
+                          }`}
+                        ></div>
+                        <p className="text-sm max-w-[7rem]">Booking</p>
+                      </div>
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "DELIVERED" ||
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "OUT FOR DELIVERY" ||
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "DEPARTED FROM ORIGIN"
+                              ? "bg-[#db1a20]"
+                              : "bg-[#d8d8d8]"
+                          }`}
+                        ></div>
+                        <p className="text-sm max-w-[7rem] text-center">
+                          Arrived at TCS Facility
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "DELIVERED" ||
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                              "OUT FOR DELIVERY"
+                              ? "bg-[#db1a20]"
+                              : "bg-[#d8d8d8]"
+                          }`}
+                        ></div>
+                        <p className="text-sm max-w-[7rem] text-center">
+                          Departed from Origin
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className={`bg-[#db1a20] w-[1rem] h-[1rem] rounded-full ${
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DELIVERED"
+                              ? "bg-[#db1a20]"
+                              : "bg-[#d8d8d8]"
+                          }`}
+                        ></div>
+                        <p className="text-sm max-w-[6.7rem] text-center">
+                          Out for Delivery
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center gap-2">
+                        <div
+                          className={`w-[1rem] h-[1rem] rounded-full ${
+                            trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                            "DELIVERED"
+                              ? "bg-[#db1a20]"
+                              : "bg-[#d8d8d8]"
+                          }`}
+                        ></div>
+                        <p className="text-sm max-w-[7rem] text-center">
+                          Delivered
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
               <div className="flex-1 my-16 mb-2">
                 <table className="mt-6 w-full">
@@ -308,7 +320,7 @@ const Track = ({}) => {
             </div>
           </div>
         )}
-        {isLoading===false && trackRecord && trackRecord[0] === null && (
+        {isLoading === false && trackRecord && trackRecord[0] === null && (
           <div className="flex justify-center items-center mb-[8rem]">
             <div className="w-[70rem]  shadow-card p-8">
               <div className="flex gap-4 h-[10rem] justify-center items-center">
@@ -321,6 +333,32 @@ const Track = ({}) => {
           </div>
         )}
         {trackRecord === null && <div className="h-[15rem]"></div>}
+        {/* Track FAQs */}
+        <div className="flex flex-col justify-center items-center bg-[#FAFBFC] py-[6rem]">
+          <h1 className="font-bold text-4xl mb-[3rem]">
+            Frequently Asked Questions
+          </h1>
+          <div>
+            <SimpleAccordion
+              heading="What are the range of services and solutions provided by TCS"
+              text="To view our range of services, click the Services and Solutions tab
+            on top of the TCS homepage"
+            />
+            <SimpleAccordion
+              heading="What are the range of services and solutions provided by TCS"
+              text="To view our range of services, click the Services and Solutions tab
+            on top of the TCS homepage"
+            />
+            <SimpleAccordion
+              heading="What are the range of services and solutions provided by TCS"
+              text="To view our range of services, click the Services and Solutions tab
+            on top of the TCS homepage"
+            />
+          </div>
+          <button className="text-sm bg-[#D40511] hover:bg-[#F21E26] text-white p-2 w-full md:w-[10rem] rounded-r-sm transition-all duration-500 mt-8">
+            More FAQs
+          </button>
+        </div>
       </Layout>
     </div>
   );

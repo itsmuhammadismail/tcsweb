@@ -57,11 +57,48 @@ const Footer = () => {
           </div>
           <h2 className="font-bold mb-4 text-lg mt-8">Follow us</h2>
           <div className="flex gap-4">
-            <img src="/social/fb.svg" alt="" className="h-5 social" />
-            <img src="/social/whatsapp.svg" alt="" className="h-5 social" />
-            <img src="/social/instagram.svg" alt="" className="h-5 social" />
-            <img src="/social/twitter.svg" alt="" className="h-5 social" />
-            <img src="/social/youtube.svg" alt="" className="h-5 social" />
+            <a
+              href="https://www.facebook.com/tcscouriers/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/social/fb.svg" alt="" className="h-5 social" />
+            </a>
+            <a
+              href="https://wa.me/923161123456"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/social/whatsapp.svg" alt="" className="h-5 social" />
+            </a>
+            <a
+              href="https://www.instagram.com/tcs_couriers/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/social/instagram.svg" alt="" className="h-5 social" />
+            </a>
+            <a
+              href="https://twitter.com/tcs_couriers"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/social/twitter.svg" alt="" className="h-5 social" />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCrniUiy5dGDEZ1f4jieAS3Q"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/social/youtube.svg" alt="" className="h-5 social" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/tcs-private-limited/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img src="/social/linkedin.svg" alt="" className="h-5 social" />
+            </a>
           </div>
         </div>
       </div>

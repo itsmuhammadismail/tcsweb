@@ -30,12 +30,11 @@ const Track = ({}) => {
     setIsLoading(true);
     const result = await tracking(track);
     if (result["IsSuccess"] === true) {
-      if (result["Data"] !== null || result["Data"][0] !== null)
-        setTrackRecord(result["Data"]);
+      if (result["Data"] !== null) setTrackRecord(result["Data"]);
     }
     console.log("Record", trackRecord);
     setIsLoading(false);
-    // setTrackState(track);
+    setTrackState(track);
   };
 
   useEffect(async () => {
@@ -171,26 +170,28 @@ const Track = ({}) => {
                     <p className="">
                       Current Status:{" "}
                       <span className="text-lg text-[#f0575d] font-bold">
-                        {trackRecord[0]["DeliveryInfo"][0]["status"]}
+                        {trackRecord[0]["DeliveryInfo"] &&
+                          trackRecord[0]["DeliveryInfo"][0]["status"]}
                       </span>
                     </p>
-                    {trackRecord[0]["DeliveryInfo"][0]["status"] ===
-                      "DELIVERED" && (
-                      <>
-                        <div className="flex">
-                          <p className="w-[6rem]">Delivered on:</p>
-                          <p className="font-bold">
-                            {trackRecord[0]["DeliveryInfo"][0]["dateTime"]}
-                          </p>
-                        </div>
-                        <div className="flex">
-                          <p className="w-[6rem]">Signed by:</p>
-                          <p className="font-bold">
-                            {trackRecord[0]["DeliveryInfo"][0]["recievedBy"]}
-                          </p>
-                        </div>
-                      </>
-                    )}
+                    {trackRecord[0]["DeliveryInfo"] &&
+                      trackRecord[0]["DeliveryInfo"][0]["status"] ===
+                        "DELIVERED" && (
+                        <>
+                          <div className="flex">
+                            <p className="w-[6rem]">Delivered on:</p>
+                            <p className="font-bold">
+                              {trackRecord[0]["DeliveryInfo"][0]["dateTime"]}
+                            </p>
+                          </div>
+                          <div className="flex">
+                            <p className="w-[6rem]">Signed by:</p>
+                            <p className="font-bold">
+                              {trackRecord[0]["DeliveryInfo"][0]["recievedBy"]}
+                            </p>
+                          </div>
+                        </>
+                      )}
                   </div>
                 </div>
                 <h2 className="text-3xl font-semibold text-center my-[3rem]">

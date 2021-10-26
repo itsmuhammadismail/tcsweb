@@ -1,4 +1,5 @@
 import Fade from "react-reveal/Fade";
+import Link from "next/link";
 
 const ExpressCenter = () => {
   return (
@@ -12,7 +13,7 @@ const ExpressCenter = () => {
         <hr className="hr" />
       </Fade>
       <Fade left delay={600}>
-        <p className="text-sm text-center max-w-[55rem] mt-[1.5rem] mb-[3rem]">
+        <p className="text-sm text-center max-w-[55rem] mt-[1.5rem] mb-[1.5rem]">
           TCS boasts of the largest network of Express Centers in the country,
           with over 970 locations spread to all corners. An unparalleled
           domestic grid of infrastructure and penetration in even the remotest
@@ -21,6 +22,13 @@ const ExpressCenter = () => {
           possible quality and efficiency of services that they deserve, across
           the board.
         </p>
+      </Fade>
+      <Fade left delay={900}>
+        <Link href="/customer-services">
+          <a>
+            <button className="moreBtn mb-[3rem]">Join the TCS Family</button>
+          </a>
+        </Link>
       </Fade>
       <div className="relative">
         <img src="/Home/ExpressCenter.png" alt="" />

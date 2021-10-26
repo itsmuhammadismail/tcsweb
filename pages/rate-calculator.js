@@ -15,11 +15,18 @@ import {
 } from "@material-ui/pickers";
 import { useRouter } from "next/dist/client/router";
 import getOrigins from "../apis/getOrigins";
+import getDestinations from "../apis/getDestinations";
 
 const RateCalculator = () => {
-  const [customer, setCustomer] = useState("");
-  const [shipping, setShipping] = useState("");
   const [origins, setOrigins] = useState(null);
+  const [destinations, setDestinations] = useState(null);
+
+  const [selectedOrigin, setSelectedOrigin] = useState("");
+  const [selectedDestination, setSelectedDestination] = useState("");
+  const [postalCode, setPostalCode] = useState("");
+  const [weight, setWeight] = useState("");
+
+  const [showPostal, setShowPostal] = useState(false);
 
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -27,9 +34,22 @@ const RateCalculator = () => {
     setSelectedDate(date);
   };
 
+  const handleDestination = (e) => {
+    let value = e.target.value;
+    setSelectedDestination(value);
+    if (value.slice(-2) !== "PK") {
+      setShowPostal(true);
+    } else {
+      setShowPostal(false);
+    }
+  };
+
   useEffect(async () => {
     const resultOrigin = await getOrigins();
+    const resultDestination = await getDestinations();
     if (resultOrigin["IsSuccess"] === true) setOrigins(resultOrigin["Data"]);
+    if (resultDestination["IsSuccess"] === true)
+      setDestinations(resultDestination["Data"]);
   }, []);
 
   const [productType, setProductType] = useState({
@@ -57,16 +77,7 @@ const RateCalculator = () => {
     Object.keys(productType)
   );
 
-  const [product2Dropdown, setProduct2Dropdown] = useState([]);
-
   let [accountProd, setAccountProd] = useState("");
-
-  const handleProduct = (e) => {
-    e.target.value === "0"
-      ? setProduct2Dropdown([])
-      : setProduct2Dropdown(productType[e.target.value]);
-    setAccountProd(e.target.value);
-  };
 
   const route = useRouter();
 
@@ -118,13 +129,12 @@ const RateCalculator = () => {
                         label="Origin"
                         inputProps={{ style: { fontSize: 14 } }} // font size of input text
                         InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                        onChange={handleProduct}
                       >
                         {origins &&
                           origins.map((origin) => (
                             <MenuItem
-                              key={origin.Value}
-                              value={origin.Description}
+                              key={origin.Description}
+                              value={origin.Value}
                             >
                               {origin.Description}
                             </MenuItem>
@@ -150,15 +160,20 @@ const RateCalculator = () => {
                         required
                         labelId="demo-simple-select-outlined-label"
                         id="demo-simple-select-outlined"
-                        // value={age}
-                        // onChange={handleChange}
                         label="Destination"
                         inputProps={{ style: { fontSize: 14 } }} // font size of input text
                         InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
-                        onChange={handleProduct}
+                        onChange={handleDestination}
                       >
-                        <MenuItem value="Abbotabad">Lahore</MenuItem>
-                        <MenuItem value="Karachi">Karachi</MenuItem>
+                        {destinations &&
+                          destinations.map((destination) => (
+                            <MenuItem
+                              key={destination.Description}
+                              value={destination.Value}
+                            >
+                              {destination.Description}
+                            </MenuItem>
+                          ))}
                       </Select>
                     </FormControl>
                   </div>
@@ -170,6 +185,8 @@ const RateCalculator = () => {
                       id="outlined-required"
                       label="Weight"
                       variant="outlined"
+                      value={weight}
+                      onChange={(e) => setWeight(e.target.value)}
                       size="small"
                       type="number"
                       inputProps={{ style: { fontSize: 14 } }} // font size of input text
@@ -194,6 +211,24 @@ const RateCalculator = () => {
                     </MuiPickersUtilsProvider>
                   </div>
                 </div>
+                {showPostal && (
+                  <div className="flex gap-4 my-4">
+                    <div className="flex-1 flex flex-col">
+                      <TextField
+                        required
+                        id="outlined-required"
+                        label="Postal Code"
+                        variant="outlined"
+                        value={postalCode}
+                        onChange={(e) => setPostalCode(e.target.value)}
+                        size="small"
+                        inputProps={{ style: { fontSize: 14 } }} // font size of input text
+                        InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
+                      />
+                    </div>
+                  </div>
+                )}
+
                 <Link href="/rates">
                   <a>
                     <button className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
