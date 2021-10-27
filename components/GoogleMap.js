@@ -16,12 +16,16 @@ function TheGoogleMap(props) {
     lat: 24.89496195,
     lng: 67.15677305,
   });
+  const [zoom, setZoom] = useState(12);
   useEffect(() => {
     setCenter(props.center);
   }, [props.center]);
+  useEffect(() => {
+    setZoom(props.zoom);
+  }, [props.zoom]);
   return (
     <LoadScript googleMapsApiKey="AIzaSyC9Ntbzd-arHSe4s-H1Og78KwucQtppVu0">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={zoom}>
         {/* Child components, such as markers, info windows, etc. */}
         <>
           {props.branches.map((branch) => (

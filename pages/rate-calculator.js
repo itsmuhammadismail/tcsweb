@@ -16,8 +16,10 @@ import {
 import { useRouter } from "next/dist/client/router";
 import getOrigins from "../apis/getOrigins";
 import getDestinations from "../apis/getDestinations";
+import moment from "moment";
 
 const RateCalculator = () => {
+  const router = useRouter();
   const [origins, setOrigins] = useState(null);
   const [destinations, setDestinations] = useState(null);
 
@@ -34,6 +36,10 @@ const RateCalculator = () => {
     setSelectedDate(date);
   };
 
+  const handleOrigin = (e) => {
+    setSelectedOrigin(e.target.value);
+  };
+
   const handleDestination = (e) => {
     let value = e.target.value;
     setSelectedDestination(value);
@@ -41,6 +47,20 @@ const RateCalculator = () => {
       setShowPostal(true);
     } else {
       setShowPostal(false);
+    }
+  };
+
+  const handleRates = () => {
+    const theDate = moment(selectedDate).format("DD/MM/YYYY");
+
+    if (!showPostal) {
+      router.push(
+        `/rates?origin=${selectedOrigin}&destination=${selectedDestination}&weight=${weight}&date=${theDate}&postalCode=`
+      );
+    } else {
+      router.push(
+        `/rates?origin=${selectedOrigin}&destination=${selectedDestination}&weight=${weight}&date=${theDate}&postalCode=${postalCode}`
+      );
     }
   };
 
@@ -78,8 +98,6 @@ const RateCalculator = () => {
   );
 
   let [accountProd, setAccountProd] = useState("");
-
-  const route = useRouter();
 
   const handleAccount = () => {
     if (accountProd === "E-Commerce Solutions") route.push("/ecom");
@@ -125,7 +143,7 @@ const RateCalculator = () => {
                         labelId="demo-simple-select-outlined-label"
                         id="demo-simple-select-outlined"
                         // value={age}
-                        // onChange={handleChange}
+                        onChange={handleOrigin}
                         label="Origin"
                         inputProps={{ style: { fontSize: 14 } }} // font size of input text
                         InputLabelProps={{ style: { fontSize: 14 } }} // font size of input label
@@ -212,7 +230,7 @@ const RateCalculator = () => {
                   </div>
                 </div>
                 {showPostal && (
-                  <div className="flex gap-4 my-4">
+                  <div className="flex gap-4 mb-4">
                     <div className="flex-1 flex flex-col">
                       <TextField
                         required
@@ -229,13 +247,12 @@ const RateCalculator = () => {
                   </div>
                 )}
 
-                <Link href="/rates">
-                  <a>
-                    <button className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500">
-                      Check Rates
-                    </button>
-                  </a>
-                </Link>
+                <button
+                  className="text-white bg-[#D40511] h-[2.5rem] border border-[#F21E26] w-full rounded-md mt-1 p-1 text-sm hover:bg-[#F21E26] hover:text-white transition-all duration-500"
+                  onClick={handleRates}
+                >
+                  Check Rates
+                </button>
               </div>
             </div>
           </div>

@@ -13,8 +13,8 @@ const Map = ({ city }) => {
   const [filteredCities, setFilteredCities] = useState([]);
   const [offices, setOffices] = useState([]);
   const [popupCity, setPopupCity] = useState(null);
-  const [lat, setLat] = useState(24.89496195);
-  const [lng, setLng] = useState(67.15677305);
+  const [zoom, setZoom] = useState(12);
+
   const [center, setCenter] = useState({ lat: 24.89496195, lng: 67.15677305 });
 
   useEffect(async () => {
@@ -28,6 +28,15 @@ const Map = ({ city }) => {
       setCities(citiesResult["Data"]);
       setFilteredCities(citiesResult["Data"]);
     }
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+      setCenter({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
+    });
   }, []);
 
   useEffect(() => {
@@ -38,8 +47,8 @@ const Map = ({ city }) => {
         left: 0,
         behavior: "smooth",
       });
+      setZoom(12);
       searchRef.current.value = city;
-      
     }
   }, [city]);
 
@@ -65,15 +74,28 @@ const Map = ({ city }) => {
           lat: +results["Data"][0]["lat"],
           lng: +results["Data"][0]["log"],
         });
+        setZoom(12);
       }
     }
   };
 
   const handleMarker = (id) => {
     const office = branches.filter((office) => office.exp_id === id);
-    console.log("The office ", office);
+    setZoom(18);
     setPopupCity(office[0]);
     setMapHover(true);
+  };
+
+  const handleCurrent = () => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+      console.log(position);
+      setCenter({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
+    });
   };
 
   return (
@@ -118,7 +140,10 @@ const Map = ({ city }) => {
           </div>
 
           <div className="absolute bottom-[-1rem] right-3 flex gap-3">
-            <div className="bg-[#dadada] rounded-full w-10 h-10 p-2 flex justify-center items-center">
+            <div
+              className="bg-[#dadada] rounded-full w-10 h-10 p-2 flex justify-center items-center"
+              onClick={handleCurrent}
+            >
               <img src="/location.svg" alt="" />
             </div>
             <button
@@ -143,6 +168,7 @@ const Map = ({ city }) => {
                 setMapHover(true);
                 setPopupCity(office);
                 setCenter({ lat: +office.lat, lng: +office.log });
+                setZoom(18);
               }}
             >
               <h2 className="font-semibold text-sm">{office.name}</h2>
@@ -163,6 +189,7 @@ const Map = ({ city }) => {
             branches={branches}
             handleMarker={handleMarker}
             center={center}
+            zoom={zoom}
           />
         </div>
         {mapHover && (

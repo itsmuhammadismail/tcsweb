@@ -1,10 +1,12 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Map from "../components/Map";
 
 const TCSNearYou = () => {
   const [city, setCity] = useState(null);
+
+  
 
   const handleCity = (name) => {
     setCity(name);
