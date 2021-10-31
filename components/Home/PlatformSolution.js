@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PlatformSolutionBox from "./PlatformSolutionBox";
 import Fade from "react-reveal/Fade";
 
 let listDelay = 200;
-const PlatformSolution = () => {
+const PlatformSolution = ({ name }) => {
   const [selected, setSelected] = useState("Domestic");
 
   const handleSelected = (newSelection) => {
@@ -143,6 +143,13 @@ const PlatformSolution = () => {
   const handleItem = (item) => {
     setItems(item);
   };
+
+  useEffect(() => {
+    if (name) {
+      setSelected(name);
+      setItems(name);
+    }
+  }, [name]);
 
   return (
     <div className="lg:container mx-auto grid justify-items-center content-start my-[5rem] mt-[7rem] xl:h-[50vh] ">

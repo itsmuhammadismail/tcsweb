@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useState } from "react";
+import Modal from "./Modal";
 
 const Footer = () => {
+  const [show, setShow] = useState(false);
   return (
     <footer className="border-t">
       <div className="max-w-[70rem] mx-auto flex py-[7rem] px-6 gap-6">
@@ -17,7 +20,11 @@ const Footer = () => {
                 <li>Mission & Core Values</li>
               </a>
             </Link>
-            <li>Leadership</li>
+            <Link href="/leadership">
+              <a>
+                <li>Leadership</li>
+              </a>
+            </Link>
             <Link href="/day-in-the-life-of-tcs">
               <a>
                 <li>Day in the life of TCS</li>
@@ -38,10 +45,26 @@ const Footer = () => {
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
             <li className="font-bold mb-4 text-lg">Platform Solutions</li>
-            <li>Domestic</li>
-            <li>International</li>
-            <li>Supply Chain Solutions</li>
-            <li>Value Added Services</li>
+            <Link href="/platform-solutions/domestic">
+              <a>
+                <li>Domestic</li>
+              </a>
+            </Link>
+            <Link href="/platform-solutions/international">
+              <a>
+                <li>International</li>
+              </a>
+            </Link>
+            <Link href="/platform-solutions/supply">
+              <a>
+                <li>Supply Chain Solutions</li>
+              </a>
+            </Link>
+            <Link href="/platform-solutions/value">
+              <a>
+                <li>Value Added Services</li>
+              </a>
+            </Link>
           </ul>
         </div>
         <div className="flex-1">
@@ -51,7 +74,10 @@ const Footer = () => {
               type="text"
               className="border focus:outline-none px-2 py-1 w-[20rem] h-[2.2rem]"
             />
-            <button className="bg-[#ed1c24] p-2 w-[4rem] h-[2.2rem] flex justify-center items-center">
+            <button
+              onClick={() => setShow(true)}
+              className="bg-[#ed1c24] p-2 w-[4rem] h-[2.2rem] flex justify-center items-center"
+            >
               <img src="/signup.png" alt="" className="w-[1.8rem] " />
             </button>
           </div>
@@ -129,6 +155,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      {/* <Modal show={show} onClose={() => setShow(false)} /> */}
     </footer>
   );
 };
