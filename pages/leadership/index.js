@@ -1,8 +1,16 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
 import Link from "next/link";
+import { useState } from "react";
+import LeadershipModal from "../../components/LeadershipModal";
 
 const Leadership = () => {
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
   return (
     <div>
       <Head>
@@ -48,7 +56,10 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Qasim Awan</h2>
               <p className="text-sm">Executive Director</p>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div
+              className="flex flex-col justify-center items-center"
+              onClick={showModal}
+            >
               <img
                 src="/leadership/Saadia Awan.png"
                 alt=""
@@ -59,15 +70,6 @@ const Leadership = () => {
             </div>
           </div>
           <div className="flex gap-2 justify-center">
-            <div className="flex flex-col justify-center items-center">
-              <img
-                src="/leadership/Faizan Ali Siddiqi.png"
-                alt=""
-                className="w-[17rem]"
-              />
-              <h2 className="font-bold text-lg">Faizan Ali Siddiqi</h2>
-              <p className="text-sm">COO & Head of Digital Transformation</p>
-            </div>
             <div className="flex flex-col justify-center items-center">
               <img
                 src="/leadership/Muhammad Haris Jamali.png"
@@ -86,8 +88,6 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Muneeba Kassim</h2>
               <p className="text-sm">Cheif Financial Officer</p>
             </div>
-          </div>
-          <div className="flex gap-2 justify-center ">
             <div className="flex flex-col justify-center items-center">
               <img
                 src="/leadership/Zarrar Nasir Khan.png"
@@ -109,6 +109,7 @@ const Leadership = () => {
               <p className="text-sm">Director Risk & Security</p>
             </div>
           </div>
+          <LeadershipModal isModalVisible={isModalVisible}/>
         </div>
       </Layout>
     </div>

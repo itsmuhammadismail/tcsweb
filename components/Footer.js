@@ -155,7 +155,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      {/* <Modal show={show} onClose={() => setShow(false)} /> */}
+      <Modal show={show} onClose={() => setShow(false)} />
     </footer>
   );
 };
