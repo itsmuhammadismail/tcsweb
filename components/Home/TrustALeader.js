@@ -4,19 +4,21 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 
 const TrustALeader = () => {
-  const [map, setMap] = useState("map");
+  const [map, setMap] = useState("Map");
   const [scale, setScale] = useState(1);
 
-  const handleMap = () => {
+  const handleMap = (name) => {
     setScale(0.8);
     setTimeout(() => {
-      if (map == "map") {
-        setMap("mapHover");
-        setScale(1);
-      } else {
-        setMap("map");
-        setScale(1);
-      }
+      if (name === "express") setMap("Hover-map");
+      else if (name === "fleet") setMap("Fleet");
+      else if (name === "service") setMap("Service-location");
+      else if (name === "deliveries") setMap("Deiveries");
+      else if (name === "countries") setMap("Worldwide");
+      else if (name === "consumer") setMap("Touch-points");
+      else setMap("Hover-map");
+
+      setScale(1);
     }, 500);
   };
 
@@ -39,7 +41,7 @@ const TrustALeader = () => {
             <Zoom delay={500}>
               <div
                 className="flex-1 min-w-[10rem] h-[13rem] cursor-pointer"
-                onClick={handleMap}
+                onClick={() => handleMap("express")}
               >
                 <img
                   src="/Home/express.png"
@@ -57,7 +59,7 @@ const TrustALeader = () => {
             <Zoom delay={700}>
               <div
                 className="flex-1 min-w-[10rem] cursor-pointer"
-                onClick={handleMap}
+                onClick={() => handleMap("fleet")}
               >
                 <img
                   src="/Home/fleet.png"
@@ -71,7 +73,7 @@ const TrustALeader = () => {
             <Zoom delay={900}>
               <div
                 className="flex-1 min-w-[10rem] cursor-pointer"
-                onClick={handleMap}
+                onClick={() => handleMap("service")}
               >
                 <img
                   src="/Home/service.png"
@@ -89,7 +91,7 @@ const TrustALeader = () => {
             <Zoom delay={1100}>
               <div
                 className="flex-1 min-w-[10rem] cursor-pointer"
-                onClick={handleMap}
+                onClick={() => handleMap("countries")}
               >
                 <img
                   src="/Home/countries.png"
@@ -107,7 +109,7 @@ const TrustALeader = () => {
             <Zoom delay={1300}>
               <div
                 className="flex-1 min-w-[10rem] cursor-pointer"
-                onClick={handleMap}
+                onClick={() => handleMap("deliveries")}
               >
                 <img
                   src="/Home/deliveries.png"
@@ -123,7 +125,7 @@ const TrustALeader = () => {
             <Zoom delay={1500}>
               <div
                 className="flex-1 min-w-[10rem] cursor-pointer"
-                onClick={handleMap}
+                onClick={() => handleMap("consumer")}
               >
                 <img
                   src="/Home/consumer.png"
@@ -147,7 +149,7 @@ const TrustALeader = () => {
             className="flex-1 max-w-[40rem] flex flex-row-reverse"
           >
             <img
-              src={`/Home/${map}.png`}
+              src={`/deliver/${map}.png`}
               alt=""
               className="max-w-[30rem]  object-contain"
             />
