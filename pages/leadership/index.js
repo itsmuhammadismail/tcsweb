@@ -3,12 +3,21 @@ import Layout from "../../components/Layout";
 import Link from "next/link";
 import { useState } from "react";
 import LeadershipModal from "../../components/LeadershipModal";
+import { Modal } from "antd";
 
 const Leadership = () => {
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
     setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -38,7 +47,10 @@ const Leadership = () => {
               </a>
             </Link>
 
-            <div className="flex flex-col justify-center items-center">
+            <div
+              className="flex flex-col justify-center items-center cursor-pointer"
+              onClick={showModal}
+            >
               <img
                 src="/leadership/Saira Awan Malik.png"
                 alt=""
@@ -56,10 +68,7 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Qasim Awan</h2>
               <p className="text-sm">Executive Director</p>
             </div>
-            <div
-              className="flex flex-col justify-center items-center"
-              onClick={showModal}
-            >
+            <div className="flex flex-col justify-center items-center">
               <img
                 src="/leadership/Saadia Awan.png"
                 alt=""
@@ -109,7 +118,54 @@ const Leadership = () => {
               <p className="text-sm">Director Risk & Security</p>
             </div>
           </div>
-          <LeadershipModal isModalVisible={isModalVisible}/>
+          <Modal
+            title=""
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            footer={null}
+            width="40rem"
+            // style={{ width: "50rem !important", maxWidth: "50rem" }}
+          >
+            <div className="flex items-start gap-4 mt-[2rem]">
+              <div className="flex flex-col justify-center items-center w-[60rem]">
+                <img
+                  src="/leadership/Saira Awan Malik.png"
+                  alt=""
+                  className="w-[17rem]"
+                />
+                <h2 className="font-bold text-lg">Saira Awan Malik</h2>
+                <p className="text-sm">President</p>
+                <img src="/social/linkedin.svg" alt="" className="h-[1rem]" />
+              </div>
+              <div className="flex flex-col text-sm gap-4">
+                <p>
+                  Saira Awan Malik is the President of TCS Pvt Ltd. Saira is a
+                  corporate lawyer by training and from 2009-15, she worked at
+                  the London office of international law firm Cleary Gottlieb
+                  Steen & Hamilton LLP, focusing on corporate and financial
+                  transactions, including cross-border mergers & acquisitions,
+                  restructurings and capital market issuances. Saira joined TCS,
+                  which is her family business, in January 2016.
+                </p>
+                <p>
+                  Saira received an undergraduate degree in History from Yale
+                  University in May 1999. She read Law at the University of
+                  Cambridge (2001-3) and subsequently completed the Bar
+                  Vocational Course at the Inns of Court School of Law in
+                  London. She was called to the Bar of England and Wales in
+                  October 2007.
+                </p>
+                <p>
+                  Saira has served on the board of the British Pakistan
+                  Foundation (BPF) since 2012. In April 2013, she launched the
+                  BPF Women’s Network. She is also a founder member of the
+                  British Pakistani Lawyers’ Association and the Pakistan
+                  International Film Association.
+                </p>
+              </div>
+            </div>
+          </Modal>
         </div>
       </Layout>
     </div>
