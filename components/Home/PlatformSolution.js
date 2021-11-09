@@ -18,11 +18,15 @@ const PlatformSolution = ({ name }) => {
   ];
 
   const [domestic, setDomestic] = useState([
-    { name: "Express", img: "/Home/domestic/express.svg", link: "" },
+    {
+      name: "Express",
+      img: "/Home/domestic/express.svg",
+      link: "/domestic/express",
+    },
     {
       name: "Overland Express",
       img: "/Home/domestic/overlandExpress.svg",
-      link: "",
+      link: "/domestic/overland-express",
     },
     {
       name: "Frieght",
@@ -32,21 +36,25 @@ const PlatformSolution = ({ name }) => {
     {
       name: "Sentiments Express",
       img: "/Home/domestic/sentiments.svg",
-      link: "",
+      link: "/domestic/sentiments-express",
     },
     {
       name: "Studio by TCS",
       img: "/Home/domestic/studio.svg",
-      link: "",
+      link: "/domestic/studio-by-tcs",
     },
   ]);
 
   const [international, setInternational] = useState([
-    { name: "Express", img: "/Home/domestic/express.svg", link: "" },
+    {
+      name: "Express",
+      img: "/Home/domestic/express.svg",
+      link: "/international/express",
+    },
     {
       name: "Frieght",
       img: "/Home/international/freight.svg",
-      link: "",
+      link: "/international/freight",
     },
     {
       name: "Cross-Border E-commerce",
@@ -56,27 +64,27 @@ const PlatformSolution = ({ name }) => {
     {
       name: "Regional Trucking (TIR)",
       img: "/Home/international/regional.svg",
-      link: "",
+      link: "/international/regional-trucking",
     },
     {
       name: "TCS UAE",
       img: "/Home/international/uae.png",
-      link: "",
+      link: "/international/tcs-uae",
     },
     {
       name: "TCS United Kingdom",
       img: "/Home/international/uk.png",
-      link: "",
+      link: "/international/tcs-uk",
     },
     {
       name: "Sentiments Express",
       img: "/Home/international/sentiments.svg",
-      link: "",
+      link: "/international/sentiments-express",
     },
     {
       name: "Studio by TCS",
       img: "/Home/international/studio.png",
-      link: "",
+      link: "/international/studio-by-tcs",
     },
   ]);
 
@@ -84,17 +92,33 @@ const PlatformSolution = ({ name }) => {
     {
       name: "Ware Housing & Distribution",
       img: "/Home/supplyChain/warehousing.svg",
-      link: "",
+      link: "/supply-chain/warehousing",
     },
-    { name: "Ecom Solutions", img: "/Home/supplyChain/ecom.svg", link: "" },
-    { name: "PackNGo", img: "/Home/supplyChain/packNGo.svg", link: "" },
+    {
+      name: "Ecom Solutions",
+      img: "/Home/supplyChain/ecom.svg",
+      link: "/supply-chain/ecom-solutions",
+    },
+    {
+      name: "PackNGo",
+      img: "/Home/supplyChain/packNGo.svg",
+      link: "/supply-chain/pack-n-go",
+    },
     {
       name: "TCS Cool Control",
       img: "/Home/supplyChain/tcsCoolControl.svg",
-      link: "",
+      link: "/supply-chain/tcs-cool-control",
     },
-    { name: "TCS Hazir", img: "/Home/supplyChain/tcsHazir.svg", link: "" },
-    { name: "TCS Fresh", img: "/Home/supplyChain/tcsFresh.svg", link: "" },
+    {
+      name: "TCS Hazir",
+      img: "/Home/supplyChain/tcsHazir.svg",
+      link: "/supply-chain/tcs-hazir",
+    },
+    {
+      name: "TCS Fresh",
+      img: "/Home/supplyChain/tcsFresh.svg",
+      link: "/supply-chain/tcs-fresh",
+    },
     { name: "TCS Cares", img: "/Home/supplyChain/tcsCares.svg", link: "" },
     { name: "TCS Fashion", img: "/Home/supplyChain/tcsFashion.svg", link: "" },
     { name: "TCS Air", img: "/Home/supplyChain/tcsAir.svg", link: "" },
@@ -114,7 +138,7 @@ const PlatformSolution = ({ name }) => {
     {
       name: "Financial Services",
       img: "/Home/valueAddedServices/financial.svg",
-      link: "",
+      link: "/value-added-services/financial-services",
     },
     {
       name: "TCS Insights",
@@ -124,7 +148,7 @@ const PlatformSolution = ({ name }) => {
     {
       name: "Travel & Tours",
       img: "/Home/valueAddedServices/travelAndTour.svg",
-      link: "",
+      link: "/value-added-services/travel-and-tour",
     },
     {
       name: "TCS Developer Kit / APIs",
