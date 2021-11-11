@@ -23,11 +23,7 @@ const CSRTCSFoundation = () => {
             have worked on building systems and programs that allow us to do
             good in society and provide some assistance to the less fortunate.
           </p>
-          <p>
-            This tab will include buttons where we can mention our initiatives
-            and partnerships. HR consultation on existing projects that can be
-            uploaded.
-          </p>
+          
         </div>
       </Layout>
     </div>

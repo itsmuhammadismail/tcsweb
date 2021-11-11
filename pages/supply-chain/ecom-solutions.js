@@ -13,9 +13,7 @@ const Express = () => {
       </Head>
       <Layout>
         <div className="bg-[#efefef] flex justify-center items-center h-[150px]">
-          <h1 className="text-[40px] font-bold">
-            E-Com Solutions
-          </h1>
+          <h1 className="text-[40px] font-bold">E-Com Solutions</h1>
         </div>
         <div className="flex flex-col justify-center  gap-8 max-w-[50rem] mx-auto  p-[3rem]">
           <p>
@@ -49,7 +47,7 @@ const Express = () => {
               </Link>
             </li>
             <li className="hover:text-[#F21E26]">
-              <a href="/ECOM_Flyer_A4_New_KV.pdf" target="_blank">
+              <a href="/ECOM SOLUTIONS - BROCHURE.docx" target="_blank">
                 Download Brochure
               </a>
             </li>
