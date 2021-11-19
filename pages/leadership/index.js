@@ -35,11 +35,11 @@ const Leadership = () => {
           <div className="flex gap-2 justify-center">
             <Link href="/leadership/khalid-awan">
               <a>
-                <div className="flex flex-col justify-center items-center">
+                <div className="flex flex-col justify-center items-center leadership-card">
                   <img
                     src="/leadership/Khalid Nawaz Awan.png"
                     alt=""
-                    className="w-[17rem]"
+                    className="w-[17rem] "
                   />
                   <h2 className="font-bold text-lg">Khalid Nawaz Awan</h2>
                   <p className="text-sm">Founder and Chairman</p>
@@ -48,7 +48,7 @@ const Leadership = () => {
             </Link>
 
             <div
-              className="flex flex-col justify-center items-center cursor-pointer"
+              className="flex flex-col justify-center items-center cursor-pointer leadership-card"
               onClick={showModal}
             >
               <img
@@ -59,7 +59,7 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Saira Awan Malik</h2>
               <p className="text-sm">President</p>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center leadership-card">
               <img
                 src="/leadership/Qasim Awan.png"
                 alt=""
@@ -68,7 +68,7 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Qasim Awan</h2>
               <p className="text-sm">Executive Director</p>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center leadership-card">
               <img
                 src="/leadership/Saadia Awan.png"
                 alt=""
@@ -79,7 +79,7 @@ const Leadership = () => {
             </div>
           </div>
           <div className="flex gap-2 justify-center">
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center leadership-card">
               <img
                 src="/leadership/Muhammad Haris Jamali.png"
                 alt=""
@@ -88,7 +88,7 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Muhammad Haris Jamali</h2>
               <p className="text-sm">Cheif Executive Officer</p>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center leadership-card">
               <img
                 src="/leadership/Muneeba Kassim.png"
                 alt=""
@@ -97,7 +97,7 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Muneeba Kassim</h2>
               <p className="text-sm">Cheif Financial Officer</p>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center leadership-card" >
               <img
                 src="/leadership/Zarrar Nasir Khan.png"
                 alt=""
@@ -106,7 +106,7 @@ const Leadership = () => {
               <h2 className="font-bold text-lg">Zarrar Nasir Khan</h2>
               <p className="text-sm">Director Human Resources</p>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center leadership-card">
               <img
                 src="/leadership/Nasir Nasrullah.png"
                 alt=""
@@ -128,7 +128,7 @@ const Leadership = () => {
             // style={{ width: "50rem !important", maxWidth: "50rem" }}
           >
             <div className="flex items-start gap-4 mt-[2rem]">
-              <div className="flex flex-col justify-center items-center w-[60rem]">
+              <div className="flex flex-col justify-center items-center w-[60rem] leadership-card">
                 <img
                   src="/leadership/Saira Awan Malik.png"
                   alt=""

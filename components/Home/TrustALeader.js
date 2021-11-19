@@ -40,34 +40,38 @@ const TrustALeader = () => {
           <div className="flex-1 flex justify-center flex-wrap max-w-[30rem]  ">
             <Zoom delay={500}>
               <div
-                className="flex-1 min-w-[10rem] h-[13rem] cursor-pointer"
+                className="flex-1 min-w-[10rem] h-[13rem] cursor-pointer "
                 onClick={() => handleMap("express")}
               >
-                <img
-                  src="/Home/express.png"
-                  alt=""
-                  className="mb-2 h-[3rem] w-[3rem]  object-contain"
-                />
-                <div className="text-[#ED2C33] font-bold text-xl ">970+</div>
-                <div className="font-semibold text-[#373737]">
-                  Express
-                  <br />
-                  Centers
+                <div className="transition-all duration-500 zoom-out">
+                  <img
+                    src="/Home/express.png"
+                    alt=""
+                    className="mb-2 h-[3rem] w-[3rem]  object-contain"
+                  />
+                  <div className="text-[#ED2C33] font-bold text-xl ">970+</div>
+                  <div className="font-semibold text-[#373737]">
+                    Express
+                    <br />
+                    Centers
+                  </div>
                 </div>
               </div>
             </Zoom>
             <Zoom delay={700}>
               <div
-                className="flex-1 min-w-[10rem] cursor-pointer"
+                className="flex-1 min-w-[10rem] cursor-pointer "
                 onClick={() => handleMap("fleet")}
               >
-                <img
-                  src="/Home/fleet.png"
-                  alt=""
-                  className="mb-2 h-[3rem] w-[4rem] object-contain"
-                />
-                <div className="text-[#ED2C33] font-bold text-xl ">4500+</div>
-                <div className="font-semibold text-[#373737]">Fleet</div>
+                <div className="transition-all duration-500 zoom-out">
+                  <img
+                    src="/Home/fleet.png"
+                    alt=""
+                    className="mb-2 h-[3rem] w-[4rem] object-contain"
+                  />
+                  <div className="text-[#ED2C33] font-bold text-xl ">4500+</div>
+                  <div className="font-semibold text-[#373737]">Fleet</div>
+                </div>
               </div>
             </Zoom>
             <Zoom delay={900}>
@@ -75,16 +79,18 @@ const TrustALeader = () => {
                 className="flex-1 min-w-[10rem] cursor-pointer"
                 onClick={() => handleMap("service")}
               >
-                <img
-                  src="/Home/service.png"
-                  alt=""
-                  className="mb-2 h-[3rem] w-[3rem] object-contain"
-                />
-                <div className="text-[#ED2C33] font-bold text-xl ">2500+</div>
-                <div className="font-semibold text-[#373737]">
-                  Service
-                  <br />
-                  Locations
+                <div className="transition-all duration-500 zoom-out">
+                  <img
+                    src="/Home/service.png"
+                    alt=""
+                    className="mb-2 h-[3rem] w-[3rem] object-contain"
+                  />
+                  <div className="text-[#ED2C33] font-bold text-xl ">2500+</div>
+                  <div className="font-semibold text-[#373737]">
+                    Service
+                    <br />
+                    Locations
+                  </div>
                 </div>
               </div>
             </Zoom>
@@ -93,16 +99,18 @@ const TrustALeader = () => {
                 className="flex-1 min-w-[10rem] cursor-pointer"
                 onClick={() => handleMap("countries")}
               >
-                <img
-                  src="/Home/countries.png"
-                  alt=""
-                  className="mb-2 h-[3rem] w-[3rem] object-contain"
-                />
-                <div className="text-[#ED2C33] font-bold text-xl ">220+</div>
-                <div className="font-semibold text-[#373737]">
-                  Countries
-                  <br />
-                  Worldwide
+                <div className="transition-all duration-500 zoom-out">
+                  <img
+                    src="/Home/countries.png"
+                    alt=""
+                    className="mb-2 h-[3rem] w-[3rem] object-contain"
+                  />
+                  <div className="text-[#ED2C33] font-bold text-xl ">220+</div>
+                  <div className="font-semibold text-[#373737]">
+                    Countries
+                    <br />
+                    Worldwide
+                  </div>
                 </div>
               </div>
             </Zoom>
@@ -111,15 +119,17 @@ const TrustALeader = () => {
                 className="flex-1 min-w-[10rem] cursor-pointer"
                 onClick={() => handleMap("deliveries")}
               >
-                <img
-                  src="/Home/deliveries.png"
-                  alt=""
-                  className="mb-2 h-[3rem] w-[3rem] object-contain"
-                />
-                <div className="text-[#ED2C33] font-bold text-xl ">
-                  150 Million+
+                <div className="transition-all duration-500 zoom-out">
+                  <img
+                    src="/Home/deliveries.png"
+                    alt=""
+                    className="mb-2 h-[3rem] w-[3rem] object-contain"
+                  />
+                  <div className="text-[#ED2C33] font-bold text-xl ">
+                    150 Million+
+                  </div>
+                  <div className="font-semibold text-[#373737]">Deliveries</div>
                 </div>
-                <div className="font-semibold text-[#373737]">Deliveries</div>
               </div>
             </Zoom>
             <Zoom delay={1500}>
@@ -127,18 +137,20 @@ const TrustALeader = () => {
                 className="flex-1 min-w-[10rem] cursor-pointer"
                 onClick={() => handleMap("consumer")}
               >
-                <img
-                  src="/Home/consumer.png"
-                  alt=""
-                  className="mb-2 h-[3rem] w-[3rem] object-contain"
-                />
-                <div className="text-[#ED2C33] font-bold text-xl ">
-                  15 Million+
-                </div>
-                <div className="font-semibold text-[#373737]">
-                  Consumer
-                  <br />
-                  Touchpoints
+                <div className="transition-all duration-500 zoom-out">
+                  <img
+                    src="/Home/consumer.png"
+                    alt=""
+                    className="mb-2 h-[3rem] w-[3rem] object-contain"
+                  />
+                  <div className="text-[#ED2C33] font-bold text-xl ">
+                    15 Million+
+                  </div>
+                  <div className="font-semibold text-[#373737]">
+                    Consumer
+                    <br />
+                    Touchpoints
+                  </div>
                 </div>
               </div>
             </Zoom>

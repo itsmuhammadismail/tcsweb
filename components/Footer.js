@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-[70rem] mx-auto flex py-[7rem] px-6 gap-6">
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
-            <li className="font-bold mb-4 text-lg">Company Information</li>
+            <li className="font-bold mb-4 text-lg link-title">Company Information</li>
             <Link href="/about">
               <a>
                 <li>About TCS</li>
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
         <div className="flex-1 flex ">
           <ul className="flex-1 text-sm flex flex-col gap-1 link">
-            <li className="font-bold mb-4 text-lg">Platform Solutions</li>
+            <li className="font-bold mb-4 text-lg link-title">Platform Solutions</li>
             <Link href="/platform-solutions/domestic">
               <a>
                 <li>Domestic</li>

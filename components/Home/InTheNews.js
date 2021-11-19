@@ -36,7 +36,7 @@ const InTheNews = () => {
         <div className="flex flex-wrap gap-4 justify-center mt-[2rem]">
           {news.map((n) => (
             <Fade up key={n.id} delay={delay}>
-              <div className="flex-1 w-full cursor-pointer">
+              <div className="flex-1 w-full cursor-pointer news-card">
                 <img src={n.img} alt="" />
                 <h2 className="font-bold text-xl w-[15rem] my-2">
                   {n.heading}

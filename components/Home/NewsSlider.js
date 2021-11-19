@@ -24,9 +24,9 @@ export default function NewsSlider() {
         loop={true}
         className="mySwiper text-white "
       >
-        <SwiperSlide className="cursor-pointer">
+        <SwiperSlide className="cursor-pointer working-card">
           <div
-            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
+            className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center  bg-no-repeat bg-cover rounded-md w-full "
             style={{ backgroundImage: "url('/Home/Working-with-TCS-2.jpg')" }}
           >
             <h1 className="text-2xl font-bold mt-[8rem] 2xl:mt-[13rem] text-white">
@@ -35,7 +35,7 @@ export default function NewsSlider() {
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="cursor-pointer">
+        <SwiperSlide className="cursor-pointer working-card">
           <div
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/Working-with-TCS-1.jpg')" }}
@@ -46,7 +46,7 @@ export default function NewsSlider() {
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="cursor-pointer">
+        <SwiperSlide className="cursor-pointer working-card">
           <div
             className="bottom-[2rem] flex flex-col items-start p-4 h-[15rem] 2xl:h-[20rem] bg-center bg-no-repeat bg-cover rounded-md w-full"
             style={{ backgroundImage: "url('/Home/Working-with-TCS-3.jpg')" }}

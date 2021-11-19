@@ -200,6 +200,7 @@ a:hover {
   margin-right: 5rem;
 }
 
+
 .swiper-button-next::after {
   display: none;
 }
@@ -255,7 +256,10 @@ a:hover {
 .link li {
   @apply cursor-pointer hover:text-[#F21E26];
 }
-
+.link-title:hover {
+  cursor: text;
+  color: black !important;
+}
 /* Animations Keyframes */
 @keyframes zoom-in {
   0% {
@@ -403,3 +407,24 @@ a:hover {
   animation: height 0.5s ease;
 }
 
+/* .leadership-card:hover img {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.18);
+} */
+
+.leadership-card:hover h2 {
+  color: #f21e26;
+}
+
+.zoom-out:hover {
+  transform: scale(0.75);
+}
+.news-card img,
+.working-card {
+  transition: all 0.5s ease;
+}
+.news-card:hover img,
+.working-card:hover {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.18);
+  transform: scale(1.05);
+  /* padding: 1rem; */
+}
