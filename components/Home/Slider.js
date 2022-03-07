@@ -62,31 +62,31 @@ const Slider = () => {
 
   return (
     <Fade right>
-      <div className="flex-1  self-end max-w-[45rem]">
-        <div className="bg-[#ED1C24] text-white rounded-l-md px-[6rem] pb-[3rem] pt-[6rem] h-[15rem]">
-          <div className="relative flex gap-1">
-            <div className="absolute top-[-13rem] ">
+      <div className="flex-1  self-end max-w-[45rem] mt-[2rem] md:mt-[unset]">
+        <div className="bg-[#ED1C24] relative text-white rounded-l-md px-[2rem] md:px-[6rem] pb-[3rem] pt-[6rem] h-[18rem] md:h-[15rem]">
+          <div className="relative flex gap-1 ">
+            <div className="absolute top-[-10rem] md:top-[-11rem] xl:top-[-13rem] ">
               <img
                 src={slide.img1}
                 alt=""
-                className="w-[10rem] object-contain"
+                className="w-[5rem] md:w-[8rem] xl:w-[10rem] object-contain"
               />
             </div>
-            <div className="absolute top-[-16.7rem] left-[10.2rem]">
+            <div className="absolute top-[-13.2rem] md:top-[-14.5rem] xl:top-[-16.7rem] left-[5.3rem] md:left-[8.2rem] xl:left-[10.2rem]">
               <img
                 src={slide.img2}
                 alt=""
-                className="w-[12rem] object-contain"
+                className="w-[7rem] md:w-[10rem] xl:w-[12rem] object-contain"
               />
             </div>
-            <div className="absolute top-[-13rem] left-[22.4rem] ">
+            <div className="absolute top-[-12rem] md:top-[-13rem] left-[12.5rem] md:left-[18.4rem] xl:left-[22.4rem] ">
               <img
                 src={slide.img3}
                 alt=""
-                className="w-[8rem] object-contain "
+                className="w-[3.5rem] md:w-[6rem] xl:w-[8rem] object-contain "
               />
             </div>
-            <div className="absolute top-[-3rem] left-[26rem] cursor-pointer ">
+            <div className="absolute top-[-3rem] right-[-1rem] md:left-[26rem] cursor-pointer flex ">
               <KeyboardArrowLeftIcon style={{ fontSize: 40 }} onClick={prev} />
               <KeyboardArrowRightIcon style={{ fontSize: 40 }} onClick={next} />
             </div>

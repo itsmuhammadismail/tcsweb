@@ -24,7 +24,7 @@ const TrustALeader = () => {
 
   return (
     <div
-      className=" flex flex-col justify-center p-[7rem]"
+      className=" flex flex-col justify-center px-[2rem] py-[5rem] md:p-[7rem]"
       style={{ backgroundImage: "url(Home/TrustALeaderBG.png)" }}
     >
       <div className="mx-auto xl:width-[70rem !important]">
@@ -36,7 +36,7 @@ const TrustALeader = () => {
         <Fade left delay={300}>
           <hr className="hr" />
         </Fade>
-        <div className="flex justify-between items-center mt-[1rem] ">
+        <div className="flex flex-col lg:flex-row justify-between items-center mt-[1rem] ">
           <div className="flex-1 flex justify-center flex-wrap max-w-[30rem]  ">
             <Zoom delay={500}>
               <div
@@ -163,7 +163,7 @@ const TrustALeader = () => {
             <img
               src={`/deliver/${map}.png`}
               alt=""
-              className="max-w-[30rem]  object-contain"
+              className="max-w-[20rem] md:max-w-[30rem] object-contain"
             />
           </motion.div>
         </div>

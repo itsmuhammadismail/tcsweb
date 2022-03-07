@@ -135,7 +135,7 @@ a:hover {
 }
 
 .card {
-  @apply bg-white flex flex-col justify-center items-center w-full md:w-[13rem] h-[8rem]  gap-4 cursor-pointer;
+  @apply bg-white flex flex-col justify-center items-center w-full md:w-[13rem] h-[8rem]  gap-4 cursor-pointer min-w-[18rem] md:min-w-[unset];
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.18);
   transition: all 0.25s ease;
 }
@@ -200,7 +200,6 @@ a:hover {
   margin-right: 5rem;
 }
 
-
 .swiper-button-next::after {
   display: none;
 }
@@ -212,6 +211,15 @@ a:hover {
   width: 6rem !important;
   background-position: center;
   margin-left: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next {
+    margin-right: -1rem;
+  }
+  .swiper-button-prev {
+    margin-left: -1rem;
+  }
 }
 
 .swiper-button-prev::after {

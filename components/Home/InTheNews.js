@@ -33,7 +33,7 @@ const InTheNews = () => {
         <Fade left delay={300}>
           <hr className="hr" />
         </Fade>
-        <div className="flex flex-wrap gap-4 justify-center mt-[2rem]">
+        <div className="flex flex-wrap gap-4 justify-center mt-[2rem] px-[2rem]">
           {news.map((n) => (
             <Fade up key={n.id} delay={delay}>
               <div className="flex-1 w-full cursor-pointer news-card">

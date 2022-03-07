@@ -17,7 +17,19 @@ export default function NewsSlider() {
   return (
     <>
       <Swiper
-        slidesPerView={2.8}
+        slidesPerView={1.5}
+        breakpoints={{
+          // when window width is >= 640px
+          // 640: {
+          //   // width: 640,
+          //   slidesPerView: 1,
+          // },
+          // when window width is >= 768px
+          768: {
+            // width: 768,
+            slidesPerView: 2.8,
+          },
+        }}
         centeredSlides={true}
         spaceBetween={30}
         navigation={true}
@@ -57,7 +69,6 @@ export default function NewsSlider() {
             <p>Industry-wide meetups, events and conferences.</p>
           </div>
         </SwiperSlide>
-        
       </Swiper>
     </>
   );
